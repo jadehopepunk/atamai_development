@@ -13,11 +13,21 @@
           </div>
         </div>
       </header>
+
       <section id="page">
-        <%= yield %>
+        <div class="section_contents">
+          <%= yield %>
+        </div>
       </section>
+
       <footer>
-        <%= render '/refinery/footer' -%>
+        <div class="inner">
+          <div class="fixed">
+            <div class="fixed_inner">
+              <%= render '/refinery/footer' -%>
+            </div>
+          </div>
+        </div>
       </footer>
     </div>
     <%= render '/refinery/javascripts' %>
