@@ -55,13 +55,13 @@ img.right {
 }
 
 #page_container {
-  background-image: url(/images/layout/body_outside_background.gif);
+  background-image: url(/assets/layout/body_outside_background.gif);
   background-repeat: repeat;
   background-color: #E7DDD4; }
 
 #page_container > header {
   background-color: #323f2f;
-  background-image: url(/images/layout/header_background.gif);
+  background-image: url(/assets/layout/header_background.gif);
   background-repeat: repeat;
   margin: 0;
   padding: 0;
@@ -69,7 +69,7 @@ img.right {
   position: relative }
 
   #page_container > header > .inner {
-    background-image: url(/images/layout/header.jpg);
+    background-image: url(/assets/layout/header.jpg);
     background-position: top center;
     background-repeat: no-repeat;}
 
@@ -93,7 +93,7 @@ img.right {
     margin: 0 auto;
     padding: 10px;
     line-height: 140%;
-    background-image: url(/images/layout/watermark_white.png);
+    background-image: url(/assets/layout/watermark_white.png);
     background-position: 60px -8px;
     background-repeat: no-repeat; }
     #page_container > header .logo_container h1#logo {
@@ -101,7 +101,7 @@ img.right {
       padding: 0;
       height: 80px;
       text-align: right;
-      background-image: url(/images/layout/atamai_village_logo.png);
+      background-image: url(/assets/layout/atamai_village_logo.png);
       background-position: top right;
       background-repeat: no-repeat; }
       #page_container > header h1 a, #page_container > header h1 a:link, #page_container > header h1 a:visited, #page_container > header h1 a:active {
@@ -136,13 +136,13 @@ img.right {
         display: block;
         width: 105px;
         height: 27px;
-        background-image: url(/images/layout/tab.png);
+        background-image: url(/assets/layout/tab.png);
         color: #cccccc;
         text-align: center;
         line-height: 27px;
         text-decoration: none; }
       #page_container > header #menu ul li.selected a {
-        background-image: url(/images/layout/tab_highlighted.png);
+        background-image: url(/assets/layout/tab_highlighted.png);
         height: 26px;
         margin-top: 1px;
         color: white; }
@@ -159,7 +159,7 @@ img.right {
 section#page {
   width: 100%;
   margin: 0;
-  background-image: url(/images/layout/body.jpg);
+  background-image: url(/assets/layout/body.jpg);
   background-repeat: repeat-y;
   background-position: top center;
   border-bottom: 2px solid black; }
@@ -236,7 +236,7 @@ section#page {
   clear: both;
   display: block;
   background-color: #302824;
-  background-image: url(/images/layout/hero_outside_background.gif);
+  background-image: url(/assets/layout/hero_outside_background.gif);
   background-repeat: repeat;
   color: white;
   font-size: 120%;
@@ -262,15 +262,15 @@ section#page {
     font-size: 150%;
     line-height: 100%; }
     #hero .inner {
-      background-image: url(/images/layout/hero_outside_top.jpg);
+      background-image: url(/assets/layout/hero_outside_top.jpg);
       background-position: top left;
       background-repeat: repeat-x; }
       #hero .inner .inner2 {
-        background-image: url(/images/layout/hero.jpg);
+        background-image: url(/assets/layout/hero.jpg);
         background-position: top center;
         background-repeat: repeat-y; }
         #hero .inner .inner2 .inner3 {
-          background-image: url(/images/layout/hero_top.jpg);
+          background-image: url(/assets/layout/hero_top.jpg);
           background-position: top center;
           background-repeat: no-repeat; }
 
