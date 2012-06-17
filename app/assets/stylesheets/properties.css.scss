@@ -1,0 +1,48 @@
+.property_details {
+ .commons_share {
+   background-color: #e7ddd4;
+   padding: 10px;
+
+   margin: 1em 0;
+   color: #333;
+
+   $radius: 8px;
+   -webkit-border-radius: $radius;
+   -moz-border-radius: $radius;
+   border-radius: $radius;
+
+   h3 {
+     margin-top: 0;
+   }
+   p {
+     margin-bottom: 0;
+   }
+ }
+
+ .contact {
+   margin-top: 2em;
+   color: #333;
+ }
+}
+
+.availability_sold, .availability_available {
+  display: inline-block;
+  margin-top: -2px;
+  padding: 2px 4px 0 4px;
+  background-color: red;
+
+  $radius: 2px;
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+
+.availability_sold {
+  background-color: red;
+}
+.availability_available {
+  background-color: green;
+}
+.availability_under_offer {
+  background-color: orange;
+}

@@ -1,0 +1,59 @@
+- content_for :body_content_title do
+  = @property.lot_number
+
+- content_for :body_content_left do
+  %article.property_listing
+    %h2.section_headline= @property.headline
+
+    %section.description
+      = image_fu @property.main_image, '500x300', :class => 'right'
+
+      - if @property.description.present?
+        %h3 Description
+        =raw @property.description
+
+      - if @property.potential_uses.present?
+        %h3 Potential Uses
+        =raw @property.potential_uses
+
+- content_for :body_content_right do
+  %aside.property_details
+    %h2 Section Details
+
+    %table.key_value
+      %tbody
+        %tr
+          %td.key Name
+          %td.value= @property.lot_name
+        - if @property.availability_status.present?
+          %tr
+            %td.key Availability
+            %td.value
+              %span.availability{:class => availability_class(@property.availability_status)}= @property.availability_status
+        - if @property.land_area_sqm
+          %tr
+            %td.key Size
+            %td.value
+              .sqm= in_sqm @property.land_area_sqm
+              .explanation.acres= in_acres @property.land_area_sqm
+        %tr
+          %td.key Price
+          %td.value
+            - if @property.total_price
+              = gst_ex_price @property.total_price
+            - else
+              To be determined
+
+    .commons_share
+      %h3 Atamai Commons Share
+      %p
+        Like all Atamai Properties, this comes with an
+        = link_to "Atamai commons share", '/about/commons-share'
+        included in the price.
+
+    .contact
+      %p
+        To register your interest in this section,
+        = link_to("contact us", '/contact') + '.'
+
+= render '/refinery/content_page'

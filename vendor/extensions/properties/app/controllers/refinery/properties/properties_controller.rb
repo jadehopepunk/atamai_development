@@ -1,6 +1,7 @@
 module Refinery
   module Properties
     class PropertiesController < ::ApplicationController
+      helper PropertiesHelper
 
       before_filter :find_all_properties
       before_filter :find_page

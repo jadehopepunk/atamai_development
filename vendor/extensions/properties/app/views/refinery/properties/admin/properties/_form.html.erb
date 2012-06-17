@@ -15,6 +15,21 @@
   </div>
 
   <div class='field'>
+    <%= f.label :total_price -%>
+    <%= f.text_field :total_price  -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :availability_status -%>
+    <%= f.text_field :availability_status  -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :land_area_sqm -%>
+    <%= f.text_field :land_area_sqm  -%>
+  </div>
+
+  <div class='field'>
     <div id='page-tabs' class='clearfix ui-tabs ui-widget ui-widget-content ui-corner-all'>
       <ul id='page_parts'>
         <% [:description, :potential_uses].each_with_index do |part, part_index| %>

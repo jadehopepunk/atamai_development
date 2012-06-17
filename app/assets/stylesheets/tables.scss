@@ -1,0 +1,28 @@
+table.key_value {
+
+  td {
+    margin: 0;
+    padding: 10px 2px 10px 2px;
+    border-bottom: 1px solid #e7ddd4;
+  }
+
+  tr:last-child td {
+    border-bottom: none;
+    padding-bottom: 2px;
+  }
+
+  tr:first-child td {
+    padding-top: 2px;
+  }
+
+  td.key {
+    font-weight: bold;
+    vertical-align: top;
+  }
+
+  td.value {
+    .explanation {
+      color: #666;
+    }
+  }
+}
