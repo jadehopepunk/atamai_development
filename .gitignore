@@ -94,3 +94,5 @@ vendor/extensions/**/spec/dummy
 
 
 .powrc
+
+config/database.yml
