@@ -1,5 +1,5 @@
 GIT
-  remote: git://github.com/resolve/refinerycms-search.git
+  remote: https://github.com/resolve/refinerycms-search.git
   revision: 004f63b0d9b0f833a3cbb35fc08086921882af17
   branch: 2-0-stable
   specs:
