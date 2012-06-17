@@ -43,3 +43,5 @@ gem 'refinerycms-search', '~> 2.0.0', :git => 'https://github.com/resolve/refine
 gem 'refinerycms-inquiries', '~> 2.0.0'
 #  gem 'refinerycms-blog', '~> 2.0.0'
 #  gem 'refinerycms-page-images', '~> 2.0.0'
+
+gem 'refinerycms-properties', :path => 'vendor/extensions'

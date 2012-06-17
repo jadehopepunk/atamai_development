@@ -1,0 +1,31 @@
+nl:
+  refinery:
+    plugins:
+      properties:
+        title: Properties
+    properties:
+      admin:
+        properties:
+          actions:
+            create_new: Maak een nieuwe Property
+            reorder: Wijzig de volgorde van de Properties
+            reorder_done: Klaar met het wijzingen van de volgorde van de Properties
+          records:
+            title: Properties
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Properties. Druk op 'Maak een nieuwe Property' om de eerste aan te maken.
+          property:
+            view_live_html: Bekijk deze property op de website <br/><em>(opent een nieuw venster)</em>
+            edit: Bewerk deze property
+            delete: Verwijder deze property voor eeuwig
+      properties:
+        show:
+          other: Andere Properties
+  activerecord:
+    attributes:
+      'refinery/properties/property':
+        lot_number: Lot Number
+        headline: Headline
+        description: Description
+        potential_uses: Potential Uses
+        main_image: Main Image

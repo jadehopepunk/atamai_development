@@ -1,0 +1,31 @@
+fr:
+  refinery:
+    plugins:
+      properties:
+        title: Properties
+    properties:
+      admin:
+        properties:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Property
+            reorder: Réordonner les Properties
+            reorder_done: Fin de réordonnancement des Properties
+          records:
+            title: Properties
+            sorry_no_results: "Désolé ! Aucun résultat."
+            no_items_yet: 'Il n''y a actuellement aucun(e) Property. Cliquer sur "Créer un(e) nouve(au/l/lle) Property" pour créer votre premi(er/ère) property.'
+          property:
+            view_live_html: Voir ce(t/tte) property <br/><em>(Ouvre une nouvelle fenêtre)</em>
+            edit: Modifier ce(t/tte) property
+            delete: Supprimer définitivement ce(t/tte) property
+      properties:
+        show:
+          other: Autres Properties
+  activerecord:
+    attributes:
+      'refinery/properties/property':
+        lot_number: Lot Number
+        headline: Headline
+        description: Description
+        potential_uses: Potential Uses
+        main_image: Main Image

@@ -1,0 +1,11 @@
+<% content_for :body do %>
+  <ul id="properties">
+    <% @properties.each do |property| %>
+      <li>
+        <%= link_to property.lot_number, refinery.properties_property_path(property) %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= render '/refinery/content_page' %>

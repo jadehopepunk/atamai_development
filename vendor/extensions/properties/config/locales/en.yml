@@ -1,0 +1,31 @@
+en:
+  refinery:
+    plugins:
+      properties:
+        title: Properties
+    properties:
+      admin:
+        properties:
+          actions:
+            create_new: Add New Property
+            reorder: Reorder Properties
+            reorder_done: Done Reordering Properties
+          records:
+            title: Properties
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Properties yet. Click "Add New Property" to add your first property.
+          property:
+            view_live_html: View this property live <br/><em>(opens in a new window)</em>
+            edit: Edit this property
+            delete: Remove this property forever
+      properties:
+        show:
+          other: Other Properties
+  activerecord:
+    attributes:
+      'refinery/properties/property':
+        lot_number: Lot Number
+        headline: Headline
+        description: Description
+        potential_uses: Potential Uses
+        main_image: Main Image

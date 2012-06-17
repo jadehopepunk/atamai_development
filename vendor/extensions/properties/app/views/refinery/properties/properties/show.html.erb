@@ -1,0 +1,51 @@
+<% content_for :body_content_title do %>
+  <%= @property.lot_number %>
+<% end %>
+
+<% content_for :body do %>
+  <section>
+    <h1>Lot Number</h1>
+    <p>
+      <%=raw @property.lot_number %>
+    </p>
+  </section>
+  <section>
+    <h1>Headline</h1>
+    <p>
+      <%=raw @property.headline %>
+    </p>
+  </section>
+  <section>
+    <h1>Description</h1>
+    <p>
+      <%=raw @property.description %>
+    </p>
+  </section>
+  <section>
+    <h1>Potential Uses</h1>
+    <p>
+      <%=raw @property.potential_uses %>
+    </p>
+  </section>
+  <section>
+    <h1>Main Image</h1>
+    <p>
+      <%= image_fu @property.main_image, nil %>
+    </p>
+  </section>
+<% end %>
+
+<% content_for :side_body do %>
+  <aside>
+    <h2><%= t('.other') %></h2>
+    <ul id="properties">
+      <% @properties.each do |property| %>
+        <li>
+          <%= link_to property.lot_number, refinery.properties_property_path(property) %>
+        </li>
+      <% end %>
+    </ul>
+  </aside>
+<% end %>
+
+<%= render '/refinery/content_page' %>

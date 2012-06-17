@@ -1,0 +1,32 @@
+es:
+  refinery:
+    plugins:
+      properties:
+        title: Properties
+#        article: masculino/femenino
+    properties:
+      admin:
+        properties:
+          actions:
+            create_new: Crear nuevo property
+            reorder: Reordenar properties
+            reorder_done: Reordenación de properties completada
+          records:
+            title: Properties
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay properties todavía. Pulsa en "Crear nuevo Property" para crear tu primer property.
+          property:
+            view_live_html: Ver este property como abierto al público <br/><em>(abre en ventana nueva)</em>
+            edit: Editar este property
+            delete: Borrar este property para siempre
+      properties:
+        show:
+          other: Otros properties
+  activerecord:
+    attributes:
+      'refinery/properties/property':
+        lot_number: Lot Number
+        headline: Headline
+        description: Description
+        potential_uses: Potential Uses
+        main_image: Main Image
