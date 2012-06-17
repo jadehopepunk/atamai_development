@@ -1,3 +1,5 @@
+require "bundler/capistrano"
+
 set :application, "atamai_development"
 set :repository,  "https://github.com/craigambrose/atamai_development.git"
 
@@ -7,6 +9,7 @@ set :deploy_to, "/home/rails/#{application}/production"
 set :user, 'rails'
 set :use_sudo, false
 set :rake, 'bundle exec rake'
+set :deploy_via, :remote_cache
 
 set :domain, "atamai.org.nz"
 role :web, domain                          # Your HTTP server, Apache/etc
@@ -33,10 +36,10 @@ after "deploy:update_code" do
   link_from_shared_to_current('config')
 end
 
-namespace :dragonfly do
-  desc "Symlink the Rack::Cache files"
-  task :symlink, :roles => [:app] do
-    run "mkdir -p #{shared_path}/tmp/dragonfly && ln -nfs #{shared_path}/tmp/dragonfly #{release_path}/tmp/dragonfly"
-  end
-end
-after 'deploy:update_code', 'dragonfly:symlink'
+# namespace :dragonfly do
+#   desc "Symlink the Rack::Cache files"
+#   task :symlink, :roles => [:app] do
+#     run "mkdir -p #{shared_path}/tmp/dragonfly && ln -nfs #{shared_path}/tmp/dragonfly #{release_path}/tmp/dragonfly"
+#   end
+# end
+# after 'deploy:update_code', 'dragonfly:symlink'
