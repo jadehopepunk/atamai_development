@@ -1,15 +1,6 @@
 <div class='wym_skin_refinery page_part' id='page_image_picker'>
-  <%= render 'images_bar', :f => f %>
-
-  <!-- <div class='field'>
-    <%= f.label :main_image -%>
-    <%= render '/refinery/admin/image_picker',
-               :f => f,
-               :field => :main_image_id,
-               :image => @property.main_image,
-               :toggle_image_display => false %>
-
-  </div> -->
+  <%= render '/refinery/admin/pages/tabs/images_bar', :f => f %>
+  <%= render '/refinery/admin/pages/tabs/images_field', :f => f %>
 </div>
 
 <% content_for :stylesheets, stylesheet_link_tag('refinery/page-image-picker') %>
