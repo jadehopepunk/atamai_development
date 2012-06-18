@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120617033916) do
+ActiveRecord::Schema.define(:version => 20120618072030) do
 
   create_table "refinery_images", :force => true do |t|
     t.string   "image_mime_type"
@@ -112,6 +112,15 @@ ActiveRecord::Schema.define(:version => 20120617033916) do
     t.datetime "created_at",          :null => false
     t.datetime "updated_at",          :null => false
   end
+
+  create_table "refinery_property_images", :force => true do |t|
+    t.integer "image_id"
+    t.integer "property_id"
+    t.integer "position"
+  end
+
+  add_index "refinery_property_images", ["image_id"], :name => "index_refinery_property_images_on_image_id"
+  add_index "refinery_property_images", ["property_id"], :name => "index_refinery_property_images_on_property_id"
 
   create_table "refinery_resources", :force => true do |t|
     t.string   "file_mime_type"
