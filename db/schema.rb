@@ -123,16 +123,18 @@ ActiveRecord::Schema.define(:version => 20120618075354) do
 
   create_table "refinery_properties", :force => true do |t|
     t.string   "lot_number"
+    t.string   "street_address"
     t.string   "headline"
     t.integer  "total_price"
     t.string   "availability_status"
     t.integer  "land_area_sqm"
     t.text     "description"
     t.text     "potential_uses"
-    t.integer  "main_image_id"
     t.integer  "position"
-    t.datetime "created_at",          :null => false
-    t.datetime "updated_at",          :null => false
+    t.decimal  "latitude",            :precision => 12, :scale => 8
+    t.decimal  "longitude",           :precision => 12, :scale => 8
+    t.datetime "created_at",                                         :null => false
+    t.datetime "updated_at",                                         :null => false
   end
 
   create_table "refinery_resources", :force => true do |t|

@@ -1,0 +1,10 @@
+#slides
+  .slides_container
+    - page.images.each do |image|
+      .slide
+        = link_to image_tag(image.thumbnail("500x300#c").url), image.url, :target => "_blank"
+
+
+= content_for :javascripts, javascript_include_tag('slides_min_jquery.js')
+= content_for :javascripts, javascript_include_tag('enable_galleries.js')
+= content_for :stylesheets, stylesheet_link_tag('slides_global')

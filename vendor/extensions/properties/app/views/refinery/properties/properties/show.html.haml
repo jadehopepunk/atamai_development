@@ -16,6 +16,8 @@
         %h3 Potential Uses
         =raw @property.potential_uses
 
+    = render 'gallery', :page => @property
+
 - content_for :body_content_right do
   %aside.property_details
     %h2 Section Details
