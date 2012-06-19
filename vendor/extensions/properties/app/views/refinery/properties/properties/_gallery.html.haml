@@ -1,10 +1,9 @@
-#slides
-  .slides_container
-    - page.images.each do |image|
-      .slide
-        = link_to image_tag(image.thumbnail("500x300#c").url), image.url, :target => "_blank"
+%ul#gallery
+  - page.images.each do |image|
+    %li
+      = image_tag(image.thumbnail("570x270#c").url)
 
-
-= content_for :javascripts, javascript_include_tag('slides_min_jquery.js')
-= content_for :javascripts, javascript_include_tag('enable_galleries.js')
-= content_for :stylesheets, stylesheet_link_tag('slides_global')
+= content_for :javascripts do
+  = javascript_include_tag('gallery_view/jquery.timers-1.2.js')
+  = javascript_include_tag('gallery_view/jquery.galleryview-2.1.1.js')
+  = javascript_include_tag('enable_galleries.js')

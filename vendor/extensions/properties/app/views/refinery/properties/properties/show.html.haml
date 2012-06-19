@@ -6,7 +6,7 @@
     %h2.section_headline= @property.headline
 
     %section.description
-      = image_fu @property.main_image, '500x300', :class => 'right'
+      = render 'gallery', :page => @property
 
       - if @property.description.present?
         %h3 Description
@@ -15,8 +15,6 @@
       - if @property.potential_uses.present?
         %h3 Potential Uses
         =raw @property.potential_uses
-
-    = render 'gallery', :page => @property
 
 - content_for :body_content_right do
   %aside.property_details
