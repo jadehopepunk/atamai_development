@@ -34,7 +34,16 @@ end
 
 after "deploy:finalize_update" do
   link_from_shared_to_current('config')
+  run "ln -nfs #{shared_path}/assets #{release_path}/public/assets"
 end
+
+desc "precompile the assets locally and push to server"
+task :deploy_assets, :except => { :no_release => true } do
+   run_locally("rake assets:clean assets:precompile")
+   run_locally("rsync -r --delete-after --progress ./public/assets/* #{user}@#{domain}:#{shared_path}/assets/")
+   run_locally("rake assets:clean")
+end
+after "deploy:update_code", "deploy_assets"
 
 # namespace :dragonfly do
 #   desc "Symlink the Rack::Cache files"
