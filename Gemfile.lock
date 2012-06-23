@@ -9,6 +9,9 @@ GIT
 PATH
   remote: vendor/extensions
   specs:
+    refinerycms-formtastic (1.0)
+      formtastic (~> 2.2.1)
+      refinerycms-core (~> 2.0.5)
     refinerycms-locations (1.0)
       refinerycms-core (~> 2.0.5)
     refinerycms-properties (1.0)
@@ -75,6 +78,8 @@ GEM
     execjs (1.4.0)
       multi_json (~> 1.0)
     filters_spam (0.3)
+    formtastic (2.2.1)
+      actionpack (>= 3.0)
     friendly_id (4.0.7)
     globalize3 (0.2.0)
       activemodel (>= 3.0.0)
@@ -229,6 +234,7 @@ DEPENDENCIES
   mysql2
   rails (= 3.2.5)
   refinerycms (~> 2.0.0)
+  refinerycms-formtastic!
   refinerycms-i18n (~> 2.0.0)
   refinerycms-inquiries (~> 2.0.0)
   refinerycms-locations!

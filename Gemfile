@@ -46,3 +46,4 @@ gem 'refinerycms-page-images', '~> 2.0.0'
 
 gem 'refinerycms-properties', :path => 'vendor/extensions'
 gem 'refinerycms-locations', :path => 'vendor/extensions'
+gem 'refinerycms-formtastic', :path => 'vendor/extensions'

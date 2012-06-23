@@ -1,0 +1,43 @@
+.formtastic {
+  fieldset {
+/*    margin-top: 1em;*/
+  }
+
+  .input {
+    .label {
+      float: none;
+      margin: 0 0 0.5em 0;
+
+      abbr {
+        margin-left: 0.3em;
+      }
+    }
+  }
+
+  .inputs {
+    input {
+      width: 400px;
+    }
+
+    input, textarea, select {
+      border: 1px solid #7F9DB9;
+      line-height: 20px;
+      padding: 0.4% 0.5%;
+    }
+
+    input.widest, select.widest, textarea.widest {
+      width: 98%;
+    }
+    select.widest {
+      max-width: 98%;
+    }
+
+    input.larger {
+      font-size: 200%;
+    }
+  }
+}
+
+.ui-tabs {
+  margin-bottom: 1em;
+}

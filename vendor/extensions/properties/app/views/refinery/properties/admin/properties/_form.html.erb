@@ -1,12 +1,11 @@
-<%= form_for [refinery, :properties_admin, @property] do |f| -%>
+<%= semantic_form_for [refinery, :properties_admin, @property] do |f| -%>
   <%= render '/refinery/admin/error_messages',
               :object => @property,
               :include_object_name => true %>
 
-  <div class='field'>
-    <%= f.label :headline -%>
-    <%= f.text_field :headline, :class => 'larger widest' -%>
-  </div>
+  <%= f.inputs do %>
+    <%= f.input :headline, :input_html => {:class => 'larger widest'} %>
+  <% end %>
 
   <div class='field'>
     <div id='page-tabs' class='clearfix ui-tabs ui-widget ui-widget-content ui-corner-all'>
@@ -30,36 +29,15 @@
     </div>
   </div>
 
-  <div class='field'>
-    <%= f.label :lot_number -%>
-    <%= f.text_field :lot_number  -%>
-  </div>
-
-  <div class='field'>
-    <%= f.label :street_address -%>
-    <%= f.text_field :street_address  -%>
-  </div>
-
-  <div class='field'>
-    <%= f.label :total_price -%>
-    <%= f.text_field :total_price  -%>
-  </div>
-
-  <div class='field'>
-    <%= f.label :availability_status -%>
-    <%= f.text_field :availability_status  -%>
-  </div>
-
-  <div class='field'>
-    <%= f.label :land_area_sqm -%>
-    <%= f.text_field :land_area_sqm  -%>
-  </div>
-
-  <div class='field'>
-    <%= f.label :latitude_and_longitude -%>
-    <%= f.text_field :latitude  -%>
-    <%= f.text_field :longitude  -%>
-  </div>
+  <%= f.inputs do %>
+    <%= f.input :lot_number %>
+    <%= f.input :street_address %>
+    <%= f.input :total_price %>
+    <%= f.input :availability_status %>
+    <%= f.input :land_area_sqm %>
+    <%= f.input :latitude %>
+    <%= f.input :longitude %>
+  <% end %>
 
   <%= render '/refinery/admin/form_actions', :f => f,
              :continue_editing => false,
