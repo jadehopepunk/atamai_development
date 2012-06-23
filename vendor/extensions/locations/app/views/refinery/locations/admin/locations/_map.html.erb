@@ -1,5 +1,24 @@
 <div class="wym_skin_refinery page_part">
   <div class="wym_box field">
     map goes here
+    <div id="map-picker">
+
+    </div>
   </div>
 </div>
+
+<% content_for :stylesheets, stylesheet_link_tag('refinery/locations/map_picker.css') %>
+<% content_for :javascripts do %>
+  <%= javascript_include_tag('http://maps.google.com/maps/api/js?sensor=true') %>
+  <%= javascript_include_tag('refinery/locations/vendor/gmaps.js') %>
+
+  <script>
+    $(document).ready(function(){
+      var map = new GMaps({
+        div: '#map-picker',
+        lat: -12.043333,
+        lng: -77.028333
+      })
+    });
+  </script>
+<% end %>

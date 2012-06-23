@@ -42,7 +42,7 @@ gem 'refinerycms-i18n', '~> 2.0.0'
 gem 'refinerycms-search', '~> 2.0.0', :git => 'https://github.com/resolve/refinerycms-search.git', :branch => '2-0-stable'
 gem 'refinerycms-inquiries', '~> 2.0.0'
 #  gem 'refinerycms-blog', '~> 2.0.0'
- gem 'refinerycms-page-images', '~> 2.0.0'
+gem 'refinerycms-page-images', '~> 2.0.0'
 
 gem 'refinerycms-properties', :path => 'vendor/extensions'
 gem 'refinerycms-locations', :path => 'vendor/extensions'
