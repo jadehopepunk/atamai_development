@@ -9,6 +9,8 @@ GIT
 PATH
   remote: vendor/extensions
   specs:
+    refinerycms-locations (1.0)
+      refinerycms-core (~> 2.0.5)
     refinerycms-properties (1.0)
       refinerycms-core (~> 2.0.5)
 
@@ -229,6 +231,7 @@ DEPENDENCIES
   refinerycms (~> 2.0.0)
   refinerycms-i18n (~> 2.0.0)
   refinerycms-inquiries (~> 2.0.0)
+  refinerycms-locations!
   refinerycms-page-images (~> 2.0.0)
   refinerycms-properties!
   refinerycms-search (~> 2.0.0)!
