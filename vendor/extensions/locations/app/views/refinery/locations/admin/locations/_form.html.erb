@@ -3,13 +3,13 @@
               :object => @location,
               :include_object_name => true %>
 
-  
+
   <div class='field'>
     <%= f.label :name -%>
     <%= f.text_field :name, :class => 'larger widest'  -%>
 
   </div>
-  
+
   <div class='field'>
     <div id='page-tabs' class='clearfix ui-tabs ui-widget ui-widget-content ui-corner-all'>
       <ul id='page_parts'>
@@ -18,6 +18,9 @@
             <%= link_to t("#{part}", :scope => "activerecord.attributes.refinery/locations/location", :default => part.to_s.titleize), "##{part}" %>
           </li>
         <% end %>
+        <li class="ui-state-default">
+          <%= link_to t("images", :scope => "activerecord.attributes.refinery/properties/property", :default => 'Images'), "#images" %>
+        </li>
       </ul>
       <div id='page_part_editors'>
         <% [:description].each do |part| %>
@@ -26,22 +29,25 @@
           </div>
         <% end %>
       </div>
+      <div class='page_part' id='images'>
+        <%= render '/refinery/admin/pages/tabs/images', :f => f %>
+      </div>
     </div>
 
   </div>
-  
+
   <div class='field'>
     <%= f.label :latitude -%>
     <%= f.text_field :latitude  -%>
 
   </div>
-  
+
   <div class='field'>
     <%= f.label :longitude -%>
     <%= f.text_field :longitude  -%>
 
   </div>
-  
+
   <%= render '/refinery/admin/form_actions', :f => f,
              :continue_editing => false,
              :delete_title => t('delete', :scope => 'refinery.locations.admin.locations.location'),

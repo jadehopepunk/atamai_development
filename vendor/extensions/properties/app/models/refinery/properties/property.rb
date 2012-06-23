@@ -11,7 +11,6 @@ module Refinery
 
       validates :lot_number, :presence => true, :uniqueness => true
 
-      belongs_to :main_image, :class_name => '::Refinery::Image'
       has_many_page_images
 
       def lot_name

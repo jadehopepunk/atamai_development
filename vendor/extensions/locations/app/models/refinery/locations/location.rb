@@ -8,6 +8,8 @@ module Refinery
       acts_as_indexed :fields => [:name, :description]
 
       validates :name, :presence => true, :uniqueness => true
+
+      has_many_page_images
     end
   end
 end
