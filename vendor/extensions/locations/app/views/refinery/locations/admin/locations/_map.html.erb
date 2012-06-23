@@ -1,9 +1,15 @@
 <div class="wym_skin_refinery page_part">
   <div class="wym_box field">
-    map goes here
     <div id="map-picker">
 
     </div>
+
+    <aside>
+      <%= f.inputs do %>
+        <%= f.input :latitude %>
+        <%= f.input :longitude %>
+      <% end %>
+    </aside>
   </div>
 </div>
 
@@ -16,8 +22,14 @@
     $(document).ready(function(){
       var map = new GMaps({
         div: '#map-picker',
-        lat: -12.043333,
-        lng: -77.028333
+        zoom: 16,
+        mapType: 'Satellite',
+        lat: <%= Refinery::Locations.config.map_center.first %>,
+        lng: <%= Refinery::Locations.config.map_center.last %>,
+        click: function(e) {
+          $('#location_latitude').val(e.latLng.lat());
+          $('#location_longitude').val(e.latLng.lng());
+        },
       })
     });
   </script>

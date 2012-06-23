@@ -17,5 +17,6 @@ module Refinery
         @factory_paths ||= [ root.join('spec', 'factories').to_s ]
       end
     end
+    require 'refinery/locations/configuration'
   end
 end
