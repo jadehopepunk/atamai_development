@@ -26,11 +26,21 @@
         mapType: 'Satellite',
         lat: <%= Refinery::Locations.config.map_center.first %>,
         lng: <%= Refinery::Locations.config.map_center.last %>,
-        click: function(e) {
-          $('#location_latitude').val(e.latLng.lat());
-          $('#location_longitude').val(e.latLng.lng());
-        },
-      })
+      });
+
+      google.maps.event.addListener(map.map, 'click', function(e) {
+        $('#location_latitude').val(e.latLng.lat());
+        $('#location_longitude').val(e.latLng.lng());
+
+        map.removeMarkers();
+        map.addMarker({
+          lat: e.latLng.lat(),
+          lng: e.latLng.lng(),
+          title: 'Selected point'
+        });
+      });
+
+
     });
   </script>
 <% end %>
