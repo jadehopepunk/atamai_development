@@ -1,8 +1,4 @@
 .formtastic {
-  fieldset {
-/*    margin-top: 1em;*/
-  }
-
   .input {
     .label {
       float: none;
@@ -34,6 +30,26 @@
 
     input.larger {
       font-size: 200%;
+    }
+  }
+
+  .tab-panels {
+    fieldset {
+      border: 1px solid red;
+
+      ol {
+        background-color: #F2F2F2;
+        border: 1px solid #CCCCCC;
+        padding: 5px;
+      }
+    }
+  }
+
+  fieldset {
+    ol {
+      li.wymeditor {
+        width: 100%;
+      }
     }
   }
 }
