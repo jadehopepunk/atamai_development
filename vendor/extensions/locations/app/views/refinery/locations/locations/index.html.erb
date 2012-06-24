@@ -17,12 +17,10 @@
   <% if location %>
     <div class="map_sidebar">
       <div class="arrow"></div>
-      <div class="location_preview">
-        <h2 class="location_name"><%= location.name %></h2>
+      <div class="location_preview" id="location_preview">
+        <h2 class="location_name"></h2>
         <div class="location_content">
-          <div class="description_preview">
-            <%= location.description_preview.html_safe %>
-          </div>
+          <div class="description_preview"></div>
           <% image = location.images.first %>
           <%= image_tag(image.thumbnail("253x160#c").url, :class => 'location_image') if image %>
           <%= link_to "more details", "/locations/#{location.to_param}" %>
@@ -40,7 +38,7 @@
   <script type="text/javascript">
     $(document).ready(function(){
       var locations_map = new Application.LocationsMap('#locations_index_map', <%= Refinery::Locations.config.map_center.first %>, <%= Refinery::Locations.config.map_center.last %>);
-      locations_map.addLocations(<%= @locations.to_json.html_safe %>);
+      locations_map.addLocations(<%= @locations.to_json(:methods => [:description_preview]).html_safe %>);
     });
   </script><% end %>
 

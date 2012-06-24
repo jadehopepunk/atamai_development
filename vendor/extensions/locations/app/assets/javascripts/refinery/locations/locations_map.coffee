@@ -10,10 +10,18 @@ class Application.LocationsMap
       lng: lng,
     });
 
+  updateLocation: (location, e) =>
+    $('#location_preview .location_name').text(location['name'])
+    $('#location_preview .description_preview').text(location['description_preview'])
+
   addLocations: (locations) ->
-    for location in locations
+    @locations = locations
+    for location in @locations
       @map.addMarker {
         lat: location['latitude'],
         lng: location['longitude'],
-        title: location['name']
+        title: location['name'],
+        infoWindow: {content: location['name']}
+        click: (e)=>
+          this.updateLocation(location, e)
       }
