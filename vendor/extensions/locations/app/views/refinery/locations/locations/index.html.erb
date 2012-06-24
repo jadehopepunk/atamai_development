@@ -12,6 +12,27 @@
   </article>
 <% end %>
 
+<% content_for :body_content_right do %>
+  <% location = @locations.first %>
+  <% if location %>
+    <div class="map_sidebar">
+      <div class="arrow"></div>
+      <div class="location_preview">
+        <h2 class="location_name"><%= location.name %></h2>
+        <div class="location_content">
+          <div class="description_preview">
+            <%= location.description_preview.html_safe %>
+          </div>
+          <% image = location.images.first %>
+          <%= image_tag(image.thumbnail("253x160#c").url, :class => 'location_image') if image %>
+          <%= link_to "more details", "/locations/#{location.to_param}" %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+<% end %>
+
+
 <% content_for :javascripts do %>
   <%= javascript_include_tag('http://maps.google.com/maps/api/js?sensor=true') %>
   <%= javascript_include_tag('refinery/locations/vendor/gmaps.js') %>
