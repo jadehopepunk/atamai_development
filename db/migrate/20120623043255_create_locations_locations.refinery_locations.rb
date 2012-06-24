@@ -5,8 +5,8 @@ class CreateLocationsLocations < ActiveRecord::Migration
     create_table :refinery_locations do |t|
       t.string :name
       t.text :description
-      t.decimal :latitude
-      t.decimal :longitude
+      t.decimal :latitude, :precision => 12, :scale => 8
+      t.decimal :longitude, :precision => 12, :scale => 8
       t.integer :position
 
       t.timestamps

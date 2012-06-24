@@ -1,4 +1,12 @@
 GIT
+  remote: https://github.com/craigambrose/refinerycms-formtastic.git
+  revision: 237b2868d9ef3157c9aa36c967a2a4d8bed70b57
+  specs:
+    refinerycms-formtastic (1.0.1)
+      formtastic (~> 2.2.1)
+      refinerycms-core (~> 2.0.5)
+
+GIT
   remote: https://github.com/resolve/refinerycms-search.git
   revision: 004f63b0d9b0f833a3cbb35fc08086921882af17
   branch: 2-0-stable
@@ -167,9 +175,6 @@ GEM
       will_paginate (~> 3.0.2)
     refinerycms-dashboard (2.0.5)
       refinerycms-core (= 2.0.5)
-    refinerycms-formtastic (1.0.1)
-      formtastic (~> 2.2.1)
-      refinerycms-core (~> 2.0.5)
     refinerycms-i18n (2.0.0)
       refinerycms-core (~> 2.0.0)
       routing-filter (>= 0.2.3)
@@ -234,7 +239,7 @@ DEPENDENCIES
   mysql2
   rails (= 3.2.5)
   refinerycms (~> 2.0.0)
-  refinerycms-formtastic
+  refinerycms-formtastic!
   refinerycms-i18n (~> 2.0.0)
   refinerycms-inquiries (~> 2.0.0)
   refinerycms-locations!

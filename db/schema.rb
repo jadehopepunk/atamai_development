@@ -62,8 +62,8 @@ ActiveRecord::Schema.define(:version => 20120623043255) do
   create_table "refinery_locations", :force => true do |t|
     t.string   "name"
     t.text     "description"
-    t.decimal  "latitude",    :precision => 10, :scale => 0
-    t.decimal  "longitude",   :precision => 10, :scale => 0
+    t.decimal  "latitude",    :precision => 12, :scale => 8
+    t.decimal  "longitude",   :precision => 12, :scale => 8
     t.integer  "position"
     t.datetime "created_at",                                 :null => false
     t.datetime "updated_at",                                 :null => false
