@@ -11,17 +11,25 @@ class Application.LocationsMap
     }
 
   updateLocation: (location, e) =>
+    $('#location_preview').show()
     $('#location_preview .location_name').text(location['name'])
     $('#location_preview .description_preview').text(location['description_preview'])
+    if location['preview_image_url']
+      $('#location_preview .image_container').html("<img src=\"#{location['preview_image_url']}\" class=\"location_image\"/>")
+    else
+      $('#location_preview .image_container').html("")
 
   addLocations: (locations) ->
     @locations = locations
     for location in @locations
-      @map.addMarker {
-        lat: location['latitude'],
-        lng: location['longitude'],
-        title: location['name'],
-        infoWindow: {content: location['name']}
-        click: (e)=>
-          this.updateLocation(location, e)
-      }
+      this.addLocation location
+
+  addLocation: (location) ->
+    @map.addMarker {
+      lat: location['latitude'],
+      lng: location['longitude'],
+      title: location['name'],
+      infoWindow: {content: location['name']}
+      click: (e)=>
+        this.updateLocation(location, e)
+    }

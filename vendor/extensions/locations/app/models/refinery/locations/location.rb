@@ -22,6 +22,11 @@ module Refinery
       def latlng
         [latitude, longitude] if latitude && longitude
       end
+
+      def preview_image_url
+        image = images.first
+        image.thumbnail("253x160#c").url if image
+      end
     end
   end
 end
