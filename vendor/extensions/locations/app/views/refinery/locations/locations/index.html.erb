@@ -37,7 +37,7 @@
   <%= javascript_include_tag('refinery/locations/locations_map') %>
   <script type="text/javascript">
     $(document).ready(function(){
-      var locations_map = new Application.LocationsMap('#locations_index_map', <%= Refinery::Locations.config.map_center.first %>, <%= Refinery::Locations.config.map_center.last %>);
+      var locations_map = new Application.LocationsMap('#locations_index_map', <%= Refinery::Locations.config.map_center %>);
       locations_map.addLocations(<%= @locations.to_json(:methods => [:description_preview]).html_safe %>);
     });
   </script><% end %>

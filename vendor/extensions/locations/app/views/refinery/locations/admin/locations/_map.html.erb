@@ -17,30 +17,14 @@
 <% content_for :javascripts do %>
   <%= javascript_include_tag('http://maps.google.com/maps/api/js?sensor=true') %>
   <%= javascript_include_tag('refinery/locations/vendor/gmaps.js') %>
+  <%= javascript_include_tag('refinery/locations/map_picker') %>
 
   <script type="text/javascript">
     $(document).ready(function(){
-      var map = new GMaps({
-        div: '#map-picker',
-        zoom: 16,
-        mapType: 'Satellite',
-        lat: <%= Refinery::Locations.config.map_center.first %>,
-        lng: <%= Refinery::Locations.config.map_center.last %>,
-      });
-
-      google.maps.event.addListener(map.map, 'click', function(e) {
-        $('#location_latitude').val(e.latLng.lat());
-        $('#location_longitude').val(e.latLng.lng());
-
-        map.removeMarkers();
-        map.addMarker({
-          lat: e.latLng.lat(),
-          lng: e.latLng.lng(),
-          title: 'Selected point'
-        });
-      });
-
-
+      var map_picker = new Application.MapPicker(
+        '#map-picker',
+        <%= Refinery::Locations.config.map_center.to_json.html_safe %>,
+        <%= f.object.latlng.to_json.html_safe %>);
     });
   </script>
 <% end %>

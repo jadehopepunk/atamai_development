@@ -1,14 +1,14 @@
 window.Application ||= {}
 
 class Application.LocationsMap
-  constructor: (container_id, lat, lng) ->
-    @map = new GMaps({
+  constructor: (container_id, center) ->
+    @map = new GMaps {
       div: container_id,
       zoom: 16,
       mapType: 'Satellite'
-      lat: lat,
-      lng: lng,
-    });
+      lat: center[0],
+      lng: center[1]
+    }
 
   updateLocation: (location, e) =>
     $('#location_preview .location_name').text(location['name'])

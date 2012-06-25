@@ -18,6 +18,10 @@ module Refinery
           text.truncate(200)
         end
       end
+
+      def latlng
+        [latitude, longitude] if latitude && longitude
+      end
     end
   end
 end
