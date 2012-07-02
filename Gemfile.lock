@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/craigambrose/refinerycms-formtastic.git
-  revision: 237b2868d9ef3157c9aa36c967a2a4d8bed70b57
+  revision: e999a721836886d8f2e9b48e14857e9cd252e7bd
   specs:
     refinerycms-formtastic (1.0.1)
       formtastic (~> 2.2.1)
