@@ -21,7 +21,7 @@
 
 .teaser { margin-bottom: 50px; width: 100%; overflow: hidden }
 .teaser h2 { margin: 3px 0 0.2em 0; color: #333 }
-.teaser p { margin: 0; text-align: justify }
+.teaser p { margin: 0 0 1em 0; text-align: justify }
 .teaser a.read_more { white-space: nowrap }
 .teaser_question { margin-bottom: 46px }
 
