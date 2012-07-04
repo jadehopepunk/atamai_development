@@ -176,7 +176,7 @@ section#page {
     min-height: 600px;
     img {
       border: 1px solid #333; } }
-  #body_content_left {
+  #body_content_left, #body {
     width: 660px;
     float: left;
     h2.section_headline {
@@ -196,7 +196,7 @@ section#page {
         width: auto; }
       .field {
         margin: 12px 0; } } }
-  #body_content_right {
+  #body_content_right, #side_body {
     width: 280px;
     float: right;
     clear: right;
@@ -207,7 +207,7 @@ section#page {
       line-height: 120%;
     } } }
 
-#sub_menu {
+#submenu {
   width: 280px;
   float: right;
   background-color: #4A3D37;
@@ -215,11 +215,18 @@ section#page {
     margin: 10px;
     color: white;
     padding: 0;
+
+    li.selected > a:link, li.selected > a {
+      color: white;
+      font-weight: bold;
+    }
+
     > li {
       display: block;
       list-style: none outside none;
       margin: 0 9px 5px 0;
       padding: 0;
+
       a {
         color: #CCC;
         text-decoration: none;
@@ -230,6 +237,7 @@ section#page {
           font-weight: normal; }
         &:hover {
           color: white; } } } }
+
   ul a {
     color: white;
     font-weight: bold;

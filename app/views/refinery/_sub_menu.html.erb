@@ -1,0 +1,6 @@
+<%= render :partial => '/refinery/menu',
+  :locals => {
+  :dom_id => 'submenu',
+  :css => 'menu',
+  :roots => refinery_menu_pages.reject{|p| p.parent_id != @page.root.id }
+} %>
