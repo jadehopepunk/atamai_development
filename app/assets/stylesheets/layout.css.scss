@@ -207,11 +207,20 @@ section#page {
       line-height: 120%;
     } } }
 
-#submenu {
+#submenu_container {
   width: 280px;
   float: right;
-  background-color: #4A3D37;
-  > ul {
+  background-color: #57687C;
+
+  > a.parent {
+    display: block;
+    padding: 10px;
+    color: white;
+    background: #001334;
+    text-decoration: none;
+  }
+
+  ul {
     margin: 10px;
     color: white;
     padding: 0;
@@ -228,11 +237,11 @@ section#page {
       padding: 0;
 
       a {
-        color: #CCC;
+        color: #000;
         text-decoration: none;
         font-weight: normal;
         &:link {
-          color: #CCC;
+          color: #000;
           text-decoration: none;
           font-weight: normal; }
         &:hover {
