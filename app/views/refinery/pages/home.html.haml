@@ -1,13 +1,11 @@
-#hero
-  .why
-    %p
-      %center
-        Our Vision: "Living well, sustainably, together"
-    %p
-      Atamai Village is designed to provide a resilient community for at least 200 people. Atamai
-      is specifically designed to deal with the impacts of climate change, energy descent and the
-      economic and social challenges that are likely to follow.
-    / Lead into rest of driving forces and explanation of vision
+- content_for :hero do
+  %p.vision
+    Our Vision: "Living well, sustainably, together"
+  %p.driving_forces
+    Atamai Village is designed to provide a resilient community for at least 200 people. Atamai
+    is specifically designed to deal with the impacts of climate change, energy descent and the
+    economic and social challenges that are likely to follow.
+  / Lead into rest of driving forces and explanation of vision
 
 / .village_life.not_implemented
 /   picture giving impression of village life goes above content (and maybe tabs)
@@ -54,7 +52,7 @@
     .teaser
       %h2 Sections for sale
       %p
-        We have sections ready for sale, beautiful common lands, and also some options for rentals, jobs and business opportunities.
+        We have sections ready for sale and developed common lands available for use by residents.
         = link_to "Read More", '#', :class => "read_more"
       = image_tag 'illustrations/pond_and_site_16.jpg', :class => 'illustration', :size => '136x100'
       = image_tag 'illustrations/site_9.jpg', :class => 'illustration', :size => '136x100'
