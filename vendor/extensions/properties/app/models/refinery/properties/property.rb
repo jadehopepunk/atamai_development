@@ -16,6 +16,10 @@ module Refinery
       def lot_name
         "Lot #{lot_number}"
       end
+
+      def latlng
+        [latitude, longitude] if latitude && longitude
+      end
     end
   end
 end

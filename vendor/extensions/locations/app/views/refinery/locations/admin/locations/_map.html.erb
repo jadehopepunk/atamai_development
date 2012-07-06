@@ -1,13 +1,12 @@
 <div class="wym_skin_refinery page_part">
   <div class="wym_box field">
     <div id="map-picker">
-
     </div>
 
     <aside>
       <%= f.inputs do %>
-        <%= f.input :latitude %>
-        <%= f.input :longitude %>
+        <%= f.input :latitude, :input_html => {:id => 'location_latitude'} %>
+        <%= f.input :longitude, :input_html => {:id => 'location_longitude'} %>
       <% end %>
     </aside>
   </div>

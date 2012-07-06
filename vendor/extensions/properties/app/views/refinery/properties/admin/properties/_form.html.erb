@@ -10,10 +10,11 @@
   <%= tabbed_fieldsets f, [
     :description,
     :potential_uses,
+    Refinery::Pages::Tab.new(:name => 'map', :partial => '/refinery/locations/admin/locations/map'),
     Refinery::Pages::Tab.new(:name => 'images', :partial => '/refinery/admin/pages/tabs/images')
   ] %>
 
-  <%= f.inputs :lot_number, :street_address, :total_price, :availability_status, :land_area_sqm, :latitude, :longitude %>
+  <%= f.inputs :lot_number, :street_address, :total_price, :availability_status, :land_area_sqm %>
 
   <%= render '/refinery/admin/form_actions', :f => f,
              :continue_editing => false,
