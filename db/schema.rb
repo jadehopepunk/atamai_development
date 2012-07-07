@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120707221825) do
+ActiveRecord::Schema.define(:version => 20120707231044) do
 
   create_table "refinery_image_page_translations", :force => true do |t|
     t.integer  "refinery_image_page_id"
@@ -62,13 +62,14 @@ ActiveRecord::Schema.define(:version => 20120707221825) do
   create_table "refinery_locations", :force => true do |t|
     t.string   "name"
     t.text     "description"
-    t.decimal  "latitude",    :precision => 12, :scale => 8
-    t.decimal  "longitude",   :precision => 12, :scale => 8
+    t.decimal  "latitude",        :precision => 12, :scale => 8
+    t.decimal  "longitude",       :precision => 12, :scale => 8
     t.integer  "position"
-    t.datetime "created_at",                                 :null => false
-    t.datetime "updated_at",                                 :null => false
+    t.datetime "created_at",                                     :null => false
+    t.datetime "updated_at",                                     :null => false
     t.integer  "owner_id"
     t.string   "owner_type"
+    t.string   "colour_override"
   end
 
   create_table "refinery_page_part_translations", :force => true do |t|

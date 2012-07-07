@@ -25,9 +25,16 @@ class Application.LocationsMap
       this.addLocation location
 
   addLocation: (location) ->
+    pinColor = location['colour'] || "FE7569"
+    pinImage = new google.maps.MarkerImage("http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|" + pinColor,
+        new google.maps.Size(21, 34),
+        new google.maps.Point(0,0),
+        new google.maps.Point(10, 34))
+
     @map.addMarker {
       lat: location['latitude'],
       lng: location['longitude'],
+      icon: pinImage,
       title: location['name'],
       infoWindow: {content: location['name']}
       click: (e)=>

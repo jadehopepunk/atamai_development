@@ -1,0 +1,9 @@
+{
+	"folders":
+	[
+		{
+			"path": "/Users/craig/development/atamai_development",
+			"folder_exclude_patterns": ["tmp","log"]
+		}
+	]
+}

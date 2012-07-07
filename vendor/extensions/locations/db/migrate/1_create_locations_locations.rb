@@ -8,6 +8,7 @@ class CreateLocationsLocations < ActiveRecord::Migration
       t.decimal :longitude, :precision => 12, :scale => 8
       t.integer :owner_id
       t.string :owner_type
+      t.string :colour_override, :string, :length => 6
 
       t.integer :position
 

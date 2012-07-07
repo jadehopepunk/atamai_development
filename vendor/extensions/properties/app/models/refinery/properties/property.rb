@@ -29,14 +29,24 @@ module Refinery
       end
       
       def latitude=(value)
-        build_location unless location
+        ensure_location
         self.location.latitude = value
       end
       
       def longitude=(value)
-        build_location unless location
+        ensure_location
         self.location.longitude = value
       end
+
+      def colour
+        '990099'
+      end
+
+      private
+
+        def ensure_location
+          build_location(:owner => self) unless location
+        end
     end
   end
 end
