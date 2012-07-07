@@ -1,4 +1,7 @@
 .refinerycms-properties {
+  h1#body_content_title {
+    margin-bottom: 1em; }
+
   .property_details {
    .commons_share {
      background-color: #e7ddd4;
@@ -46,6 +49,25 @@
   }
   .availability_under_offer {
     background-color: orange;
+  }
+    
+  #body_content {
+    #property_images {
+      background-color: black;
+      padding: 10px 5px;
+      
+      #gallery {
+        margin: 0 auto;
+        
+        .pointer {
+          border-bottom-color: #AAA;
+        }
+        
+        img {
+          border: 0;
+        }
+      }
+    }
   }
 }
 

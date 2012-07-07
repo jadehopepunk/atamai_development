@@ -1,0 +1,7 @@
+- content_for :body do
+  %ul#properties
+    - @properties.each do |property|
+      %li= link_to property.lot_name, refinery.properties_property_path(property)
+
+#property_index.refinerycms-properties
+  = render '/refinery/content_page'

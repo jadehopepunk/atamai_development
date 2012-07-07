@@ -7,8 +7,7 @@ module Refinery
 
       acts_as_indexed :fields => [:name, :description]
 
-      validates :name, :presence => true, :uniqueness => true
-
+      belongs_to :owner, :polymorphic => true
       has_many_page_images
 
       def description_preview

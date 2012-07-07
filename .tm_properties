@@ -1,0 +1,3 @@
+excludeInFileChooser = "{$excludeInFileChooser,log,tmp}"
+excludeInBrowser = "{$excludeInBrowser,log,tmp}"
+excludeInFolderSearch = "{$excludeInFolderSearch,log,tmp}"

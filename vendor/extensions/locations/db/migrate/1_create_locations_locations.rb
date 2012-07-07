@@ -6,6 +6,8 @@ class CreateLocationsLocations < ActiveRecord::Migration
       t.text :description
       t.decimal :latitude, :precision => 12, :scale => 8
       t.decimal :longitude, :precision => 12, :scale => 8
+      t.integer :owner_id
+      t.string :owner_type
 
       t.integer :position
 

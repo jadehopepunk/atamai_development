@@ -10,8 +10,6 @@ class CreatePropertiesProperties < ActiveRecord::Migration
       t.text :description
       t.text :potential_uses
       t.integer :position
-      t.decimal :latitude, :precision => 12, :scale => 8
-      t.decimal :longitude, :precision => 12, :scale => 8
 
       t.timestamps
     end

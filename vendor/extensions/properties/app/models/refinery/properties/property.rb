@@ -14,13 +14,28 @@ module Refinery
       validates :lot_number, :presence => true, :uniqueness => true
 
       has_many_page_images
-
+      
+      has_one :location, :class_name => 'Refinery::Locations::Location', :foreign_key => 'owner_id', :dependent => :destroy
+      accepts_nested_attributes_for :location
+      
+      delegate :latitude, :longitude, :to => :location, :allow_nil => true
+      
       def lot_name
         "Lot #{lot_number}"
       end
 
       def latlng
         [latitude, longitude] if latitude && longitude
+      end
+      
+      def latitude=(value)
+        build_location unless location
+        self.location.latitude = value
+      end
+      
+      def longitude=(value)
+        build_location unless location
+        self.location.longitude = value
       end
     end
   end
