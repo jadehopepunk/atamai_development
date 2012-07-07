@@ -10,7 +10,7 @@ module Refinery
       belongs_to :owner, :polymorphic => true
       has_many_page_images
 
-      delegate :colour, :to => :owner, :allow_nil => true, :prefix => :owner
+      delegate :colour, :name, :description, :to => :owner, :allow_nil => true, :prefix => :owner
 
       def description_preview
         if description
@@ -31,6 +31,14 @@ module Refinery
 
       def colour
         colour_override || owner_colour
+      end
+
+      def name
+        attributes['name'] || owner_name
+      end
+
+      def description
+        attributes['description'] || owner_description
       end
     end
   end

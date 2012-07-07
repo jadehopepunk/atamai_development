@@ -42,6 +42,10 @@ module Refinery
         '990099'
       end
 
+      def name
+        lot_name
+      end
+
       private
 
         def ensure_location
