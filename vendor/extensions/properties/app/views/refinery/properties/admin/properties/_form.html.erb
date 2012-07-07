@@ -14,7 +14,13 @@
     Refinery::Pages::Tab.new(:name => 'images', :partial => '/refinery/admin/pages/tabs/images')
   ] %>
 
-  <%= f.inputs :lot_number, :street_address, :total_price, :availability_status, :land_area_sqm %>
+  <%= f.inputs do %>
+    <%= f.input :availability_status, :collection => Refinery::Properties::Property::AVAILABILITY_STATES %>
+    <%= f.input :lot_number %>
+    <%= f.input :street_address %>
+    <%= f.input :total_price %>
+    <%= f.input :land_area_sqm %>
+  <% end %>
 
   <%= render '/refinery/admin/form_actions', :f => f,
              :continue_editing => false,

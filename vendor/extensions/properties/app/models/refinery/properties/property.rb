@@ -3,6 +3,8 @@ module Refinery
     class Property < Refinery::Core::BaseModel
       self.table_name = 'refinery_properties'
 
+      AVAILABILITY_STATES = ['available now', 'available soon', 'under offer', 'sold']
+
       attr_accessible :lot_number, :headline, :description, :potential_uses,
         :position, :total_price, :availability_status, :land_area_sqm,
         :street_address, :latitude, :longitude
