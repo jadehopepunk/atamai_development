@@ -30,15 +30,7 @@ module Refinery
       end
 
       def colour
-        colour_override || owner_colour
-      end
-
-      def name
-        attributes['name'] || owner_name
-      end
-
-      def description
-        attributes['description'] || owner_description
+        colour_override
       end
     end
   end

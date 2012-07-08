@@ -46,6 +46,15 @@ module Refinery
         lot_name
       end
 
+      def preview_image_url
+        image = images.first
+        image.thumbnail("253x160#c").url if image
+      end
+
+      def description_preview
+        headline
+      end
+
       private
 
         def ensure_location

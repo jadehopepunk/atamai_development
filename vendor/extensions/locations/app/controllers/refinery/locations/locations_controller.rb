@@ -12,7 +12,7 @@ module Refinery
       end
 
       def show
-        @location = Location.find(params[:id])
+        @location = present_location(Location.find(params[:id]))
 
         # you can use meta fields from your model instead (e.g. browser_title)
         # by swapping @page for @location in the line below:
@@ -21,8 +21,14 @@ module Refinery
 
     protected
 
+      def present_location(location)
+        location.owner ? OwnerDecorator.new(location) : location
+      end
+
       def find_all_locations
-        @locations = Location.order('position ASC')
+        @locations = Location.order('position ASC').map do |location|
+          present_location(location)
+        end
       end
 
       def find_page
