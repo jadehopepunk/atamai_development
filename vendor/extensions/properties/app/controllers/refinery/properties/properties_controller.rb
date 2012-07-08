@@ -23,7 +23,11 @@ module Refinery
     protected
 
       def find_all_properties
-        @properties = Property.order('position ASC')
+        @properties_by_status = {}
+        Property.order('position ASC').each do |property|
+          @properties_by_status[property.availability_status] ||= []
+          @properties_by_status[property.availability_status] << property
+        end
       end
 
       def find_page

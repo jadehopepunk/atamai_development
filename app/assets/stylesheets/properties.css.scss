@@ -29,6 +29,57 @@
    }
   }
 
+  .properties_list {
+    overflow: hidden;
+
+    .property_preview {
+      border: 2px solid black;
+      width: 300px;
+      height: 18em;
+      float: left;
+      background-color: #333;
+      margin: 0 20px 20px 0;
+      color: #CCC;
+      display: block;
+      text-decoration: none;
+      $radius: 5px;
+      -webkit-border-radius: $radius;
+      -moz-border-radius: $radius;
+      border-radius: $radius;
+
+      h3 {
+        margin: 0;
+        background-color: black;
+        padding: 2px 10px;
+        color: white;
+      }
+
+      .contents {
+        margin: 10px;        
+      }
+
+      p.description {
+        height: 3em;
+        margin: 0;
+      }
+
+      .image_container {
+        img {
+          border: 1px solid black;
+        }        
+      }
+
+      &:hover {
+        background-color: #666;
+
+        h3 {
+          background-color: #333;
+        }
+      }
+    }
+
+  }
+
   .availability_sold, .availability_available {
     display: inline-block;
     margin-top: -2px;

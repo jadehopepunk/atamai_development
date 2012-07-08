@@ -1,0 +1,9 @@
+%a.property_preview{:href => refinery.properties_property_path(property)}
+  %h3
+    = property.name
+    %small= "(#{in_sqm(property.land_area_sqm)})" if property.land_area_sqm
+  .contents
+    %p.description= property.description_preview
+    - unless property.images.empty?
+      .image_container
+        = image_tag property.preview_image_url

@@ -19,7 +19,10 @@ module Refinery
       accepts_nested_attributes_for :location
       
       delegate :latitude, :longitude, :to => :location, :allow_nil => true
-      
+
+      scope :available_now, where(:availability_status => 'available now')      
+      scope :not_available_now, where(["availability_status != ?", 'available now'])
+
       def lot_name
         "Lot #{lot_number}"
       end

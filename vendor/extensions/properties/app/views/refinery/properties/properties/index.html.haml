@@ -1,7 +1,9 @@
-- content_for :body do
-  %ul#properties
-    - @properties.each do |property|
-      %li= link_to property.lot_name, refinery.properties_property_path(property)
+- content_for :body_content_left do
+  - @properties_by_status.each do |status, properties|  
+    %h2= status.titleize
+    .properties_list
+      - properties.each do |property|
+        = render 'preview', :property => property        
 
 #property_index.refinerycms-properties
   = render '/refinery/content_page'
