@@ -22,6 +22,7 @@ module Refinery
 
       scope :available_now, where(:availability_status => 'available now')      
       scope :not_available_now, where(["availability_status != ?", 'available now'])
+      scope :saleable_order, order("availability_status, position").where("availability_status LIKE 'available%'")
 
       def lot_name
         "Lot #{lot_number}"
@@ -54,6 +55,10 @@ module Refinery
       def preview_image_url(size = "253x160#c")
         image = images.first
         image.thumbnail(size).url if image
+      end
+
+      def first_image
+        images.first
       end
 
       def description_preview

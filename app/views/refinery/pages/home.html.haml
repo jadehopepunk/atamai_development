@@ -53,10 +53,11 @@
       %h2 Sections for sale
       %p
         We have sections ready for sale and developed common lands available for use by residents.
-        = link_to "Read More", '#', :class => "read_more"
-      = image_tag 'illustrations/pond_and_site_16.jpg', :class => 'illustration', :size => '136x100'
-      = image_tag 'illustrations/site_9.jpg', :class => 'illustration', :size => '136x100'
-      = image_tag 'illustrations/north_east_from_site_10.jpg', :class => 'illustration', :size => '136x100'
+        = link_to "Read More", '/properties', :class => "read_more"
+      - Refinery::Properties::Property.saleable_order.limit(3).each do |property|
+        - if property.first_image
+          %a{:href => '/properties', :class => 'section_image illustration'}
+            = image_tag(property.first_image.thumbnail('134x100!').url, :class => 'illustration', :size => '134x100')
 
     .teaser
       %h2 Motueka, New Zealand
@@ -67,8 +68,8 @@
         Tasman Bay and is surrounded by two national parks.
         = link_to "More about Motueka", '/about/motueka-new-zealand', :class => "read_more"
 
-.not_implemented.where_next>
-  .inner
-    %h3 Where to next?
-    %p
-      Some links go here in case you totally failed to navigate somewhere from all the above options.
+/ .not_implemented.where_next>
+/   .inner
+/     %h3 Where to next?
+/     %p
+/       Some links go here in case you totally failed to navigate somewhere from all the above options.

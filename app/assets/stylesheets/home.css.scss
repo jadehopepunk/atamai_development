@@ -38,6 +38,14 @@
   h2 { margin: 3px 0 0.4em 0; color: #001334 }
   p { margin: 0 0 1em 0; text-align: justify }
   a.read_more { white-space: nowrap }
+  a.illustration { text-decoration: none; }
+  img.illustration { 
+    border: 2px solid black;
+     $radius: 8px;
+     -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+     border-radius: $radius;
+  }
 
   margin-bottom: 50px; width: 100%; overflow: hidden
 }
