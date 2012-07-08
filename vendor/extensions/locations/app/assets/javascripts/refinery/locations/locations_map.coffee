@@ -1,10 +1,10 @@
 window.Application ||= {}
 
 class Application.LocationsMap
-  constructor: (container_id, center) ->
+  constructor: (container_id, center, options = {}) ->
     @map = new GMaps {
       div: container_id,
-      zoom: 16,
+      zoom: options.zoom || 16,
       mapType: 'Satellite'
       lat: center[0],
       lng: center[1]

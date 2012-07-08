@@ -51,9 +51,9 @@ module Refinery
         lot_name
       end
 
-      def preview_image_url
+      def preview_image_url(size = "253x160#c")
         image = images.first
-        image.thumbnail("253x160#c").url if image
+        image.thumbnail(size).url if image
       end
 
       def description_preview

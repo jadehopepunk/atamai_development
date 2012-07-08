@@ -1,7 +1,4 @@
 .refinerycms-properties {
-  h1#body_content_title {
-    margin-bottom: 1em; }
-
   .property_details {
    .commons_share {
      background-color: #e7ddd4;
@@ -31,18 +28,25 @@
 
   .properties_list {
     overflow: hidden;
+    background-color: #e7ddd4;
+    padding: 0 19px 19px 0;
+    border: 1px solid #877168;
+    $radius: 10px;
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    border-radius: $radius;
 
     .property_preview {
       border: 2px solid black;
-      width: 275px;
-      height: 18em;
+      width: 296px;
+      height: 17.5em;
       float: left;
       background-color: #333;
-      margin: 0 20px 20px 0;
+      margin: 19px 0 0 19px;
       color: #CCC;
       display: block;
       text-decoration: none;
-      $radius: 5px;
+      $radius: 3px;
       -webkit-border-radius: $radius;
       -moz-border-radius: $radius;
       border-radius: $radius;
@@ -55,7 +59,7 @@
       }
 
       .contents {
-        margin: 10px;        
+        margin: 10px 10px 0 10px;        
       }
 
       p.description {
@@ -64,8 +68,12 @@
       }
 
       .image_container {
+        background-color: black;
+        padding: 10px 0;
         img {
-          border: 1px solid black;
+          margin: 0 auto;
+          display: block;
+          border-width: 0 !important;
         }        
       }
 
@@ -73,6 +81,9 @@
         background-color: #666;
 
         h3 {
+          background-color: #333;
+        }
+        .image_container {
           background-color: #333;
         }
       }
@@ -122,13 +133,29 @@
   }
 
   #locations_index_map {
-    border: 1px solid black;
-    height: 500px;
+    border: 2px solid black;
+    height: 300px;
+    margin-top: 36px;
+    $radius: 10px;
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    border-radius: $radius;
   }
-}
 
-#property_show {
-  #submenu_container {
-    display: none;
+  #property_index {
+    h2 {
+      height: 26px;
+      margin-bottom: 10px;
+      margin-top: 0;
+    }
+    #submenu_container {
+      margin-bottom: 0;
+    }
   }
+
+  #property_show {
+    #submenu_container {
+      display: none;
+    }
+  }  
 }
