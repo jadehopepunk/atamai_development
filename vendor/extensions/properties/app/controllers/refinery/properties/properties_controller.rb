@@ -19,6 +19,8 @@ module Refinery
 
         # you can use meta fields from your model instead (e.g. browser_title)
         # by swapping @page for @property in the line below:
+        parent = @page
+        @page = Page.new(:menu_title => @property.name, :title => @property.headline, :show_in_menu => true).tap {|page| page.parent = parent}
         present(@page)
       end
 
