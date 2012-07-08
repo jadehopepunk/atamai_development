@@ -32,11 +32,13 @@ module Refinery
       end
       
       def latitude=(value)
+        return nil if value.empty?
         ensure_location
         self.location.latitude = value
       end
       
       def longitude=(value)
+        return nil if value.empty?
         ensure_location
         self.location.longitude = value
       end

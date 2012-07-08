@@ -22,12 +22,24 @@ module Refinery
 
     protected
 
+      def decorate_location(location)
+        location.owner ? Refinery::Locations::OwnerDecorator.new(location) : location
+      end
+
+      def decorate_locations(locations)
+        locations.map do |location|
+          decorate_location(location)
+        end
+      end
+
       def find_all_properties
+        @properties = Property.order('position ASC')
         @properties_by_status = {}
-        Property.order('position ASC').each do |property|
+        @properties.each do |property|
           @properties_by_status[property.availability_status] ||= []
           @properties_by_status[property.availability_status] << property
         end
+        @locations = decorate_locations(@properties.map(&:location).compact)
       end
 
       def find_page
