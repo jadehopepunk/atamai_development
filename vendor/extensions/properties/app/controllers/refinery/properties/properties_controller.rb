@@ -14,6 +14,8 @@ module Refinery
 
       def show
         @property = Property.find(params[:id])
+        @locations = []
+        @locations << decorate_location(@property.location) if @property.location
 
         # you can use meta fields from your model instead (e.g. browser_title)
         # by swapping @page for @property in the line below:

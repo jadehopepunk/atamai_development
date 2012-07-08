@@ -1,7 +1,11 @@
 #locations {
   #locations_index_map {
-    border: 1px solid black;
+    border: 2px solid black;
     height: 500px;
+    $radius: 10px;
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    border-radius: $radius;
   }
 }
 

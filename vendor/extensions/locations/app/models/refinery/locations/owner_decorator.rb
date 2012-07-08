@@ -4,7 +4,7 @@ module Refinery
       def self.use_owner_attribute(*keys)
         keys.each do |key|
           define_method(key) do
-            @subject.owner.send(key) || @subject.send(key)
+            owner.send(key) || @subject.send(key)
           end
         end
       end
@@ -27,6 +27,20 @@ module Refinery
         end
         results.as_json
       end
+
+      def detail_url
+        "/#{owner_resource_name}/#{owner.to_param}"
+      end
+
+      private
+
+        def owner_resource_name
+          owner.class.model_name.split('::').last.underscore.pluralize
+        end
+
+        def owner
+          @subject.owner
+        end
     end
   end
 end

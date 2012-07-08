@@ -32,6 +32,10 @@ module Refinery
       def colour
         colour_override
       end
+
+      def detail_url
+        "/locations/#{to_param}"
+      end
     end
   end
 end

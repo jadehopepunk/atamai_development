@@ -1,14 +1,6 @@
 <% content_for :body_content_left do %>
   <article id="locations">
     <div id="locations_index_map"></div>
-
-    <ul id="locations">
-      <% @locations.each do |location| %>
-        <li>
-          <%= link_to location.name, refinery.locations_location_path(location) %>
-        </li>
-      <% end %>
-    </ul>
   </article>
 <% end %>
 
@@ -23,7 +15,7 @@
           <div class="description_preview"></div>
           <div class="image_container">
           </div>
-          <%= link_to "more details", "/locations/#{location.to_param}" %>
+          <%= link_to "more details", location.detail_url, :class => 'more_details' %>
         </div>
       </div>
     </div>
@@ -38,7 +30,7 @@
   <script type="text/javascript">
     $(document).ready(function(){
       var locations_map = new Application.LocationsMap('#locations_index_map', <%= Refinery::Locations.config.map_center %>);
-      locations_map.addLocations(<%= @locations.to_json(:methods => [:description_preview, :preview_image_url, :colour]).html_safe %>);
+      locations_map.addLocations(<%= @locations.to_json(:methods => [:description_preview, :preview_image_url, :colour, :detail_url]).html_safe %>);
     });
   </script><% end %>
 

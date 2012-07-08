@@ -14,6 +14,7 @@ class Application.LocationsMap
     $('#location_preview').show()
     $('#location_preview .location_name').text(location['name'])
     $('#location_preview .description_preview').text(location['description_preview'])
+    $('#location_preview .more_details').attr('href', location['detail_url'])
     if location['preview_image_url']
       $('#location_preview .image_container').html("<img src=\"#{location['preview_image_url']}\" class=\"location_image\"/>")
     else
