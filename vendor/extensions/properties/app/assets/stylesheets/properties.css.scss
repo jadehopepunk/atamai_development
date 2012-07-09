@@ -114,22 +114,6 @@
   }
     
   #body_content {
-    #property_images {
-      background-color: black;
-      padding: 10px 5px;
-      
-      #gallery {
-        margin: 0 auto;
-        
-        .pointer {
-          border-bottom-color: #AAA;
-        }
-        
-        img {
-          border: 0;
-        }
-      }
-    }
   }
 
   #locations_index_map {

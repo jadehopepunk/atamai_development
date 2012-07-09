@@ -4,7 +4,7 @@
 - content_for :body_content_left do
   %article.property_listing
     %section.description
-      = render 'gallery', :page => @property
+      = render 'refinery/jquery_gallery/gallery', :page => @property
 
       - if @property.description.present?
         %h3 Description

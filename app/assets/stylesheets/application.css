@@ -12,6 +12,7 @@
  *= require layout
  *= require tables
  *= require home
+ *= require refinerycms_jquery_gallery
  *= require properties
  *= require refinery/locations
  */

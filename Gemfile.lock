@@ -17,6 +17,8 @@ GIT
 PATH
   remote: vendor/extensions
   specs:
+    refinerycms-jquery_gallery (1.0)
+      refinerycms-core (~> 2.0.5)
     refinerycms-locations (1.0)
       refinerycms-core (~> 2.0.5)
     refinerycms-properties (1.0)
@@ -242,6 +244,7 @@ DEPENDENCIES
   refinerycms-formtastic!
   refinerycms-i18n (~> 2.0.0)
   refinerycms-inquiries (~> 2.0.0)
+  refinerycms-jquery_gallery!
   refinerycms-locations!
   refinerycms-page-images (~> 2.0.0)
   refinerycms-properties!
