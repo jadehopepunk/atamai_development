@@ -3,42 +3,59 @@
 	{
 		"selected_items":
 		[
+			[
+				"detai",
+				"detail_url"
+			],
+			[
+				"mar",
+				"margin-bottom"
+			],
+			[
+				"properties",
+				"properties_by_status"
+			],
+			[
+				"avai",
+				"available_now"
+			],
+			[
+				"ava",
+				"availability_status"
+			],
+			[
+				"colour",
+				"colour_override"
+			]
 		]
 	},
 	"buffers":
 	[
-		{
-			"file": "vendor/extensions/locations/app/models/refinery/locations/location.rb",
-			"settings":
-			{
-				"buffer_size": 910,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "module Refinery\n  module Properties\n    class Property < Refinery::Core::BaseModel\n      self.table_name = 'refinery_properties'\n\n      AVAILABILITY_STATES = ['available now', 'available soon', 'under offer', 'sold']\n\n      attr_accessible :lot_number, :headline, :description, :potential_uses,\n        :position, :total_price, :availability_status, :land_area_sqm,\n        :street_address, :latitude, :longitude\n\n      acts_as_indexed :fields => [:lot_number, :headline, :description, :potential_uses]\n\n      validates :lot_number, :presence => true, :uniqueness => true\n\n      has_many_page_images\n      \n      has_one :location, :class_name => 'Refinery::Locations::Location', :foreign_key => 'owner_id', :dependent => :destroy\n      accepts_nested_attributes_for :location\n      \n      delegate :latitude, :longitude, :to => :location, :allow_nil => true\n      \n      def lot_name\n        \"Lot #{lot_number}\"\n      end\n\n      def latlng\n        [latitude, longitude] if latitude && longitude\n      end\n      \n      def latitude=(value)\n        build_location unless location\n        self.location.latitude = value\n      end\n      \n      def longitude=(value)\n        build_location unless location\n        self.location.longitude = value\n      end\n\n      def colour\n        ''\n      end\n    end\n  end\nend\n",
-			"file": "vendor/extensions/properties/app/models/refinery/properties/property.rb",
-			"file_size": 1270,
-			"file_write_time": 1341701326000000,
-			"settings":
-			{
-				"buffer_size": 1309,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 0.0,
+		"height": 307.0,
 		"selected_items":
 		[
+			[
+				"Packag",
+				"Package Control: Install Package"
+			],
+			[
+				"Package",
+				"Package Control: Install Package"
+			],
+			[
+				"Packa",
+				"Package Control: Discover Packages"
+			]
 		],
-		"width": 0.0
+		"width": 449.0
 	},
 	"console":
 	{
-		"height": 0.0
+		"height": 139.0
 	},
 	"distraction_free":
 	{
@@ -51,19 +68,66 @@
 	},
 	"file_history":
 	[
+		"/Users/craig/development/atamai_development/vendor/extensions/locations/app/views/refinery/locations/locations/show.html.haml",
+		"/Users/craig/development/atamai_development/vendor/extensions/locations/app/controllers/refinery/locations/locations_controller.rb",
+		"/Users/craig/development/atamai_development/app/views/refinery/_content_page.html.erb",
+		"/Users/craig/development/atamai_development/app/views/refinery/_sub_menu.html.erb",
+		"/Users/craig/development/atamai_development/vendor/extensions/properties/app/views/refinery/properties/properties/show.html.haml",
+		"/Users/craig/development/atamai_development/vendor/extensions/properties/app/assets/stylesheets/properties.css.scss",
+		"/Users/craig/development/atamai_development/vendor/extensions/locations/app/assets/stylesheets/refinery/locations.css.scss",
+		"/Users/craig/development/atamai_development/vendor/extensions/locations/app/views/refinery/locations/locations/index.html.haml",
+		"/Users/craig/development/atamai_development/Gemfile",
+		"/Users/craig/development/atamai_development/vendor/extensions/jquery_gallery/app/assets/javascripts/enable_galleries.js",
+		"/Users/craig/development/atamai_development/vendor/extensions/jquery_gallery/app/assets/javascripts/refinerycms_jquery_gallery.js",
+		"/Users/craig/development/atamai_development/app/assets/stylesheets/application.css",
+		"/Users/craig/development/atamai_development/app/assets/javascripts/application.js",
+		"/Users/craig/development/atamai_development/vendor/extensions/jquery_gallery/app/views/refinery/jquery_gallery/_gallery.html.haml",
+		"/Users/craig/development/atamai_development/vendor/extensions/jquery_gallery/app/assets/stylesheets/refinerycms_jquery_gallery.css.scss",
+		"/Users/craig/development/atamai_development/vendor/extensions/locations/app/views/refinery/locations/admin/locations/_map.html.erb",
+		"/Users/craig/development/atamai_development/vendor/extensions/properties/app/assets/javascripts/enable_galleries.js",
+		"/Users/craig/development/atamai_development/vendor/extensions/jquery_gallery/lib/refinery/jquery_gallery/engine.rb",
+		"/Users/craig/development/atamai_development/vendor/extensions/jquery_gallery/lib/refinery/jquery_gallery.rb",
+		"/Users/craig/development/atamai_development/vendor/extensions/jquery_gallery/lib/refinerycms-jquery_gallery.rb",
+		"/Users/craig/development/atamai_development/vendor/extensions/properties/lib/refinerycms-properties.rb",
+		"/Users/craig/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Users/craig/development/atamai_development/vendor/extensions/jquery_gallery/config/locales/fr.yml",
+		"/Users/craig/development/atamai_development/vendor/extensions/jquery_gallery/config/locales/nb.yml",
+		"/Users/craig/development/atamai_development/vendor/extensions/jquery_gallery/config/locales/nl.yml",
+		"/Users/craig/development/atamai_development/vendor/extensions/jquery_gallery/spec/spec_helper.rb",
+		"/Users/craig/development/atamai_development/vendor/extensions/jquery_gallery/refinerycms-jquery_gallery.gemspec",
+		"/Users/craig/development/atamai_development/vendor/extensions/jquery_gallery/config/locales/es.yml",
+		"/Users/craig/development/atamai_development/vendor/extensions/jquery_gallery/config/locales/en.yml",
+		"/Users/craig/development/atamai_development/vendor/extensions/jquery_gallery/tasks/testing.rake",
+		"/Users/craig/development/atamai_development/app/assets/stylesheets/home.css.scss",
+		"/Users/craig/development/atamai_development/vendor/extensions/properties/app/models/refinery/properties/property.rb",
+		"/Users/craig/development/atamai_development/app/views/refinery/pages/home.html.haml",
+		"/Users/craig/development/atamai_development/vendor/extensions/locations/app/views/refinery/locations/locations/show.html.erb",
+		"/Users/craig/development/atamai_development/vendor/extensions/properties/app/controllers/refinery/properties/properties_controller.rb",
+		"/Users/craig/development/atamai_development/vendor/extensions/locations/app/models/refinery/locations/owner_decorator.rb",
+		"/Users/craig/development/atamai_development/vendor/extensions/locations/app/models/refinery/locations/location.rb",
+		"/Users/craig/development/atamai_development/vendor/extensions/locations/app/assets/javascripts/refinery/locations/locations_map.coffee",
+		"/Users/craig/development/atamai_development/vendor/extensions/locations/app/views/refinery/locations/locations/index.html.erb",
+		"/Users/craig/development/atamai_development/vendor/extensions/properties/app/views/refinery/properties/properties/index.html.haml",
+		"/Users/craig/development/atamai_development/vendor/extensions/properties/app/views/refinery/properties/properties/_sidebar_map.html.haml",
+		"/Users/craig/development/atamai_development/app/assets/stylesheets/properties.css.scss",
+		"/Users/craig/development/atamai_development/vendor/extensions/properties/app/views/refinery/properties/properties/_preview.html.haml",
+		"/Users/craig/development/atamai_development/atamai_development.sublime-project",
+		"/Users/craig/Library/Application Support/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/Users/craig/development/atamai_development/Gemfile.lock",
 		"/Users/craig/development/atamai_development/config/initializers/refinery/locations.rb",
 		"/Users/craig/development/atamai_development/db/migrate/20120707231044_add_colour_to_locations.rb",
 		"/Users/craig/development/atamai_development/vendor/extensions/locations/db/migrate/1_create_locations_locations.rb"
 	],
 	"find":
 	{
-		"height": 0.0
+		"height": 35.0
 	},
 	"find_in_files":
 	{
 		"height": 0.0,
 		"where_history":
 		[
+			""
 		]
 	},
 	"find_state":
@@ -71,6 +135,22 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"images",
+			"gallery",
+			"content_for :style",
+			"content_for",
+			"#page_images",
+			"#property_images",
+			"locations_index_map",
+			"@subject.owner",
+			"locations_index_map",
+			"map",
+			"#body_content_title",
+			".refinerycms-properties h1#body_content_title",
+			"<br",
+			"br",
+			"locations_index_map",
+			"present_location"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -88,65 +168,8 @@
 	"groups":
 	[
 		{
-			"selected": 1,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "vendor/extensions/locations/app/models/refinery/locations/location.rb",
-					"settings":
-					{
-						"buffer_size": 910,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								518,
-								518
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "vendor/extensions/properties/app/models/refinery/properties/property.rb",
-					"settings":
-					{
-						"buffer_size": 1309,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1279,
-								1279
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -156,7 +179,7 @@
 	},
 	"input":
 	{
-		"height": 0.0
+		"height": 33.0
 	},
 	"layout":
 	{
@@ -192,8 +215,124 @@
 		"selected_items":
 		[
 			[
+				"subm",
+				"app/views/refinery/_sub_menu.html.erb"
+			],
+			[
+				"contentpage",
+				"app/views/refinery/_content_page.html.erb"
+			],
+			[
+				"locationscontr",
+				"vendor/extensions/locations/app/controllers/refinery/locations/locations_controller.rb"
+			],
+			[
+				"locations.css",
+				"vendor/extensions/locations/app/assets/stylesheets/refinery/locations.css.scss"
+			],
+			[
+				"properties.css",
+				"vendor/extensions/properties/app/assets/stylesheets/properties.css.scss"
+			],
+			[
+				"show.",
+				"vendor/extensions/locations/app/views/refinery/locations/locations/show.html.erb"
+			],
+			[
+				"show",
+				"vendor/extensions/properties/app/views/refinery/properties/properties/show.html.haml"
+			],
+			[
+				"enableg",
+				"vendor/extensions/jquery_gallery/app/assets/javascripts/enable_galleries.js"
+			],
+			[
+				"_galler",
+				"vendor/extensions/jquery_gallery/app/views/refinery/jquery_gallery/_gallery.html.haml"
+			],
+			[
+				"gemfile",
+				"Gemfile"
+			],
+			[
+				"properties.scss",
+				"vendor/extensions/properties/app/assets/stylesheets/properties.css.scss"
+			],
+			[
+				"home",
+				"app/assets/stylesheets/home.css.scss"
+			],
+			[
 				"property.rb",
 				"vendor/extensions/properties/app/models/refinery/properties/property.rb"
+			],
+			[
+				"properties.",
+				"vendor/extensions/properties/app/assets/stylesheets/properties.css.scss"
+			],
+			[
+				"menu",
+				"app/views/refinery/_sub_menu.html.erb"
+			],
+			[
+				"content",
+				"app/views/refinery/_content_page.html.erb"
+			],
+			[
+				"propcontr",
+				"vendor/extensions/properties/app/controllers/refinery/properties/properties_controller.rb"
+			],
+			[
+				".coffee",
+				"vendor/extensions/locations/app/assets/javascripts/refinery/locations/locations_map.coffee"
+			],
+			[
+				"location.b",
+				"vendor/extensions/locations/app/models/refinery/locations/location.rb"
+			],
+			[
+				"owner",
+				"vendor/extensions/locations/app/models/refinery/locations/owner_decorator.rb"
+			],
+			[
+				"propertiescontr",
+				"vendor/extensions/properties/app/controllers/refinery/properties/properties_controller.rb"
+			],
+			[
+				"locationsmap",
+				"vendor/extensions/locations/app/assets/javascripts/refinery/locations/locations_map.coffee"
+			],
+			[
+				"propertiescont",
+				"vendor/extensions/properties/app/controllers/refinery/properties/properties_controller.rb"
+			],
+			[
+				"propcon",
+				"vendor/extensions/properties/app/controllers/refinery/properties/properties_controller.rb"
+			],
+			[
+				"properties.scs",
+				"app/assets/stylesheets/properties.css.scss"
+			],
+			[
+				"preview",
+				"vendor/extensions/properties/app/views/refinery/properties/properties/_preview.html.haml"
+			],
+			[
+				"gemfil",
+				"Gemfile.lock"
+			],
+			[
+				"locations_map",
+				"vendor/extensions/locations/app/assets/javascripts/refinery/locations/locations_map.coffee"
+			],
+			[
+				"index",
+				"vendor/extensions/locations/app/views/refinery/locations/locations/index.html.erb"
+			],
+			[
+				"map",
+				"vendor/extensions/locations/app/assets/javascripts/refinery/locations/locations_map.coffee"
 			],
 			[
 				"location.rb",
@@ -226,6 +365,6 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 297.0,
+	"side_bar_width": 430.0,
 	"status_bar_visible": true
 }
