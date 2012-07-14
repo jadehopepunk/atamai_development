@@ -9,8 +9,7 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
- *= require layout
- *= require tables
+ *= require atamai
  *= require home
  *= require refinerycms_jquery_gallery
  *= require properties
