@@ -56,6 +56,15 @@
   .popover { top: 12px }
 }
 
+.movie_teaser {
+  border: 2px solid black;
+  $radius: 8px;
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+  background-color: black;
+}
+
 .where_next {
   .inner { width: 400px; margin: 0 auto; margin-collapse: none}
   background-color: #d9c7b9; margin: 0 -20px -36px -20px
