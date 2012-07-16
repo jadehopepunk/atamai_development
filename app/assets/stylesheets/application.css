@@ -15,3 +15,8 @@
  *= require properties
  *= require refinery/locations
  */
+
+iframe.map {
+ border: 2px solid black;
+ margin: 1em auto;
+}
