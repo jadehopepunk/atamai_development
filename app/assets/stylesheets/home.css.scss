@@ -30,9 +30,21 @@
   .village_life { margin: 0 10px; text-align: center; height: 3em; line-height: 3em; margin-bottom: 1em }
 
   .two_columns {
-    .column { width: 425px; float: left; }
+    .column { width: 445px; float: left; }
     .column:first-child { margin-right: 50px; }
     margin: 0 10px; overflow: hidden;
+  }
+  .one_column {
+    margin: 0 10px;
+  }
+  
+  .rationale {
+    font-size: 120%;
+    line-height: 150%;
+    margin-bottom: 2em;
+    border-bottom: 2px solid #705D55;
+    padding-left: 223px;
+    background: transparent url(/assets/oil_sunset.jpg) no-repeat 0px 10px;
   }
 
   .teaser {
@@ -60,7 +72,7 @@
       background-color: white;
       display: block;
       height: 120px;
-      padding-left: 180px;
+      padding-left: 170px;
       padding-top: 20px;
       font-size: 13pt;
       text-decoration: none;
