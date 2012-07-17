@@ -58,9 +58,14 @@
   }
   .teaser_question { 
     margin-bottom: 46px;
+    
+    p.larger {
+      font-size: 120%;
+      line-height: 150%;
+    }
 
     .checklist_link {
-      margin-top: 32px;
+      margin-top: 15px;
       background-image: url("/assets/checklist.jpg");
       background-repeat: no-repeat;
       background-color: white;
