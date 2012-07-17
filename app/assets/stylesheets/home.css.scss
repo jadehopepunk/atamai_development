@@ -5,9 +5,12 @@
     text-align: center;
     font-size: 140%;
   }
-  .driving_forces {
+  .hero_main_text {
     text-align: justify;
+    background: transparent url(/assets/oil_sunset.jpg) no-repeat 0px 0px;
+    padding-left: 223px;
   }
+  
 }
 
 /* HOME PAGE TEASERS */
@@ -38,15 +41,6 @@
     margin: 0 10px;
   }
   
-  .rationale {
-    font-size: 120%;
-    line-height: 150%;
-    margin-bottom: 2em;
-    border-bottom: 2px solid #705D55;
-    padding-left: 223px;
-    background: transparent url(/assets/oil_sunset.jpg) no-repeat 0px 10px;
-  }
-
   .teaser {
     h2 { margin: 3px 0 0.4em 0; color: #001334 }
     p { margin: 0 0 1em 0; text-align: justify }
@@ -89,8 +83,13 @@
   }
 
   .map_teaser {
-    img.map { border: 1px solid black; float: right; margin: 5px 0 0 10px }
-    .popover { top: 12px }
+    img.illustration { 
+      border: 1px solid black; 
+      $radius: 8px;
+      -webkit-border-radius: $radius;
+      -moz-border-radius: $radius;
+      border-radius: $radius;
+    }
   }
 
   .movie_teaser {

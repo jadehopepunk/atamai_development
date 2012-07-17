@@ -1,23 +1,19 @@
 - content_for :hero do
   %p.vision
     Our Vision: "Living well, sustainably, together"
-  %p.driving_forces
-    Atamai Village is designed to provide a resilient community for at least 200 people. Atamai
-    is specifically designed to deal with the impacts of climate change, energy descent and the
-    economic and social challenges that are likely to follow.
-    = link_to "read more", "/about", :class => 'read_more'
+  .hero_main_text
+    %p.about_teaser      
+      Atamai Village is designed to provide a enduring community for at least 200 people. Villagers
+      will live in privately owned homes, and enjoy the benefits of a large common area
+      jointly managed to enhance physical and social resilience.
+      = link_to "What is Atamai?", "/about", :class => 'read_more'
+    
+    %p.driving_forces
+      Atamai is specifically designed to deal with the impacts of climate change, energy descent and the
+      economic and social challenges that are likely to follow.
+      = link_to "Why build a village?", "/rationale", :class => 'read_more'
 
 #home
-  .one_column
-    .rationale
-      %p
-        Several global drivers are already beginning to shape our future in ways that will make it 
-        very different from our past. Our climate is already changing dramatically and more dramatic 
-        changes are inevitable. There is also little doubt that the energy bonanza we have all 
-        benefited from in the past is slowly disappearing. Remove cheap energy from the equation 
-        and a civilization based on continued economic growth is no longer possible.
-        = link_to "read more", "/rationale", :class => 'read_more'
-
   .two_columns
     .column
       .teaser.teaser_question
@@ -45,19 +41,15 @@
     .column
       .teaser.map_teaser
         %h2 Permaculture designed for resilience
+        
         %p
-          Explore our full site design and important village features on
+          The entire village, as well as individual house sites, are designed on permaculture principles to enhance 
+          both the physical and social resilience of the Atamai community.
+        %p
+          Atamai will have a residential area, a food production area, a forestry area and recreational areas.
           = link_to("the Atamai Village map", '/locations', :class => 'read_more') + '.'
-        .popover-wrapper
-          = image_tag 'illustrations/map_example.png', :class => 'map'
-          .popover.left
-            .arrow
-            .inner
-              %h2.title Orchard Terraces
-              .content
-                %p
-                  524 fruit trees, 120 support trees, understory plantings, swales, access paths & irrigation. Now 5 years old and already productive.
-                  = link_to "Read More", '/locations', :class => "read_more"
+
+        = image_tag 'map_teaser.png', :class => 'illustration'
 
       .teaser
         %h2 Sections now for sale
