@@ -87,16 +87,6 @@
     }
   }
 
-  .map_teaser {
-    img.illustration { 
-      border: 1px solid black; 
-      $radius: 8px;
-      -webkit-border-radius: $radius;
-      -moz-border-radius: $radius;
-      border-radius: $radius;
-    }
-  }
-
   .movie_teaser {
     border: 2px solid black;
     $radius: 8px;
