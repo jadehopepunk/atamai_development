@@ -10,6 +10,7 @@
  *
  *= require_self
  *= require atamai
+ *= require adl_layout
  *= require home
  *= require refinerycms_jquery_gallery
  *= require properties

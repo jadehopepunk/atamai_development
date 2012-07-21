@@ -50,3 +50,4 @@ gem 'refinerycms-formtastic', :git => 'https://github.com/craigambrose/refineryc
 #gem 'refinerycms-formtastic', :path => '/Users/craig/development/refinerycms-formtastic'
 gem 'refinerycms-jquery_gallery', :path => 'vendor/extensions'
 gem 'refinerycms-atamai_theme', :git => 'https://github.com/craigambrose/refinerycms-atamai_theme.git'
+# gem 'refinerycms-atamai_theme', :path => '/Users/craig/development/refinery_extensions/refinerycms-atamai_theme'
