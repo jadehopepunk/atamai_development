@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/craigambrose/refinerycms-atamai_theme.git
-  revision: 9fda06d8d37b76b6c3adfb09748fa0053a55b94a
+  revision: dcab92c38301e19efef8b2aba3395e6b7f4073d6
   specs:
     refinerycms-atamai_theme (1.0)
       refinerycms-core (~> 2.0.5)
