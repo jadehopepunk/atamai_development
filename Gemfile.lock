@@ -14,6 +14,13 @@ GIT
       refinerycms-core (~> 2.0.5)
 
 GIT
+  remote: https://github.com/craigambrose/refinerycms-jquery_gallery.git
+  revision: d408336e4c4e9ae34bfad5f8baa457d72cbc2ca9
+  specs:
+    refinerycms-jquery_gallery (1.0)
+      refinerycms-core (~> 2.0.5)
+
+GIT
   remote: https://github.com/craigambrose/refinerycms-locations.git
   revision: 1f78c1aeef7a766ecbfd0875d682b21cbfee33c2
   specs:
@@ -31,8 +38,6 @@ GIT
 PATH
   remote: vendor/extensions
   specs:
-    refinerycms-jquery_gallery (1.0)
-      refinerycms-core (~> 2.0.5)
     refinerycms-properties (1.0)
       refinerycms-core (~> 2.0.5)
 
