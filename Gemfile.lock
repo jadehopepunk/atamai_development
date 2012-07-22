@@ -188,7 +188,7 @@ GEM
       refinerycms-settings (~> 2.0.1)
     refinerycms-jquery_gallery (1.0.1)
       refinerycms-core (~> 2.0.5)
-    refinerycms-location_explorer (1.0)
+    refinerycms-location_explorer (1.0.1)
       haml-rails
       refinerycms-core (~> 2.0.5)
       refinerycms-formtastic (~> 1.0.2)
