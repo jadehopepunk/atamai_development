@@ -6,28 +6,6 @@ GIT
       refinerycms-core (~> 2.0.5)
 
 GIT
-  remote: https://github.com/craigambrose/refinerycms-formtastic.git
-  revision: e999a721836886d8f2e9b48e14857e9cd252e7bd
-  specs:
-    refinerycms-formtastic (1.0.1)
-      formtastic (~> 2.2.1)
-      refinerycms-core (~> 2.0.5)
-
-GIT
-  remote: https://github.com/craigambrose/refinerycms-jquery_gallery.git
-  revision: d408336e4c4e9ae34bfad5f8baa457d72cbc2ca9
-  specs:
-    refinerycms-jquery_gallery (1.0)
-      refinerycms-core (~> 2.0.5)
-
-GIT
-  remote: https://github.com/craigambrose/refinerycms-locations.git
-  revision: 1f78c1aeef7a766ecbfd0875d682b21cbfee33c2
-  specs:
-    refinerycms-locations (1.0)
-      refinerycms-core (~> 2.0.5)
-
-GIT
   remote: https://github.com/resolve/refinerycms-search.git
   revision: 004f63b0d9b0f833a3cbb35fc08086921882af17
   branch: 2-0-stable
@@ -194,6 +172,9 @@ GEM
       will_paginate (~> 3.0.2)
     refinerycms-dashboard (2.0.5)
       refinerycms-core (= 2.0.5)
+    refinerycms-formtastic (1.0.2)
+      formtastic (~> 2.2.1)
+      refinerycms-core (~> 2.0.5)
     refinerycms-i18n (2.0.0)
       refinerycms-core (~> 2.0.0)
       routing-filter (>= 0.2.3)
@@ -205,6 +186,14 @@ GEM
       filters_spam (~> 0.2)
       refinerycms-core (~> 2.0.1)
       refinerycms-settings (~> 2.0.1)
+    refinerycms-jquery_gallery (1.0.1)
+      refinerycms-core (~> 2.0.5)
+    refinerycms-location_explorer (1.0)
+      haml-rails
+      refinerycms-core (~> 2.0.5)
+      refinerycms-formtastic (~> 1.0.2)
+      refinerycms-jquery_gallery (~> 1.0.1)
+      refinerycms-page-images (~> 2.0.0)
     refinerycms-page-images (2.0.1)
       refinerycms-pages (~> 2.0.0)
     refinerycms-pages (2.0.5)
@@ -216,7 +205,7 @@ GEM
       dragonfly (~> 0.9.8)
       rack-cache (>= 0.5.3)
       refinerycms-core (= 2.0.5)
-    refinerycms-settings (2.0.1)
+    refinerycms-settings (2.0.2)
       refinerycms-core (~> 2.0.1)
     routing-filter (0.3.1)
       actionpack
@@ -259,11 +248,9 @@ DEPENDENCIES
   rails (= 3.2.5)
   refinerycms (~> 2.0.0)
   refinerycms-atamai_theme!
-  refinerycms-formtastic!
   refinerycms-i18n (~> 2.0.0)
   refinerycms-inquiries (~> 2.0.0)
-  refinerycms-jquery_gallery!
-  refinerycms-locations!
+  refinerycms-location_explorer
   refinerycms-page-images (~> 2.0.0)
   refinerycms-properties!
   refinerycms-search (~> 2.0.0)!
