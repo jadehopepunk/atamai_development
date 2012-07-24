@@ -27,7 +27,7 @@ module Refinery
     protected
 
       def decorate_location(location)
-        location.owner ? Refinery::Locations::OwnerDecorator.new(location) : location
+        location.owner ? Refinery::LocationExplorer::OwnerDecorator.new(location) : location
       end
 
       def decorate_locations(locations)

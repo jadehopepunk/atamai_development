@@ -15,5 +15,5 @@ Refinery::Inquiries::Engine.load_seed
 # Added by Refinery CMS Properties extension
 Refinery::Properties::Engine.load_seed
 
-# Added by Refinery CMS Locations extension
-Refinery::Locations::Engine.load_seed
+# Added by Refinery CMS LocationExplorer extension
+Refinery::LocationExplorer::Engine.load_seed

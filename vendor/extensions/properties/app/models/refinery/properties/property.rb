@@ -15,7 +15,7 @@ module Refinery
 
       has_many_page_images
       
-      has_one :location, :class_name => 'Refinery::Locations::Location', :foreign_key => 'owner_id', :dependent => :destroy
+      has_one :location, :class_name => 'Refinery::LocationExplorer::Location', :foreign_key => 'owner_id', :dependent => :destroy
       accepts_nested_attributes_for :location
       
       delegate :latitude, :longitude, :to => :location, :allow_nil => true
