@@ -7,11 +7,9 @@
   = tabbed_fieldsets f, [ |
     :description, |
     :potential_uses, |
-    Refinery::Pages::Tab.new(:name => 'map', :partial => '/refinery/locations/admin/locations/map'), |
+    Refinery::Pages::Tab.new(:name => 'map', :partial => '/refinery/location_explorer/admin/locations/map'), |
     Refinery::Pages::Tab.new(:name => 'images', :partial => '/refinery/admin/pages/tabs/images') |
   ] |
-  / = f.fields_for(:location, f.object.location || f.object.build_location) do |location_form|
-  /   = tabbed_fieldsets location_form, [Refinery::Pages::Tab.new(:name => 'map', :partial => '/refinery/locations/admin/locations/map')]
 
   = f.inputs do
     = f.input :availability_status, :collection => Refinery::Properties::Property::AVAILABILITY_STATES
