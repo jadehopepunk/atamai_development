@@ -5,6 +5,7 @@ class CreatePropertiesProperties < ActiveRecord::Migration
       t.string :street_address
       t.string :headline
       t.integer :total_price
+      t.string :price_suffix
       t.string :availability_status
       t.integer :land_area_sqm
       t.text :description

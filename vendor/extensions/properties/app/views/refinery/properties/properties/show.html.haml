@@ -37,8 +37,8 @@
         %tr
           %td.key Price
           %td.value
-            - if @property.total_price
-              = gst_ex_price @property.total_price
+            - if @property.total_price || !@property.price_suffix.blank?
+              = price_with_suffix @property.total_price, @property.price_suffix
             - else
               To be determined
 

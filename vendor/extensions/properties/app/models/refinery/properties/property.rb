@@ -7,7 +7,7 @@ module Refinery
 
       attr_accessible :lot_number, :headline, :description, :potential_uses,
         :position, :total_price, :availability_status, :land_area_sqm,
-        :street_address, :latitude, :longitude
+        :street_address, :latitude, :longitude, :price_suffix
 
       acts_as_indexed :fields => [:lot_number, :headline, :description, :potential_uses]
 

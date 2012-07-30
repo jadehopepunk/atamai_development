@@ -1,10 +1,10 @@
 # encoding: utf-8
 
 module PropertiesHelper
-  def gst_ex_price(value)
-    in_dollars(value.to_s) + " + GST" if value
+  def price_with_suffix(value, suffix)
+    [in_dollars(value.to_s), suffix].reject(&:blank?).join(" ") if value
   end
-
+  
   def in_dollars(value)
     number_to_currency(value, :precision => 0, :unit => '$') if value
   end
