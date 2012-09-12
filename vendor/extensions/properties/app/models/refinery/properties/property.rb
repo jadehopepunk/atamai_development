@@ -64,6 +64,26 @@ module Refinery
       def description_preview
         headline
       end
+      
+      def address_street
+        street_address.blank? ? 'Mytton Heights' : street_address
+      end
+      
+      def city
+        'Motueka'
+      end
+      
+      def state
+        'Tasman'
+      end
+      
+      def country_code
+        'NZ'
+      end
+      
+      def post_code
+        '7175'
+      end
 
       private
 
