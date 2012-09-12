@@ -3,6 +3,7 @@ xml.properties do
   @properties.each do |property|
     xml.property(:status => 'updated') do
       xml.reference_code property.id
+      xml.headline property.headline
       xml.location do
         xml.street property.address_street
         xml.city property.city
