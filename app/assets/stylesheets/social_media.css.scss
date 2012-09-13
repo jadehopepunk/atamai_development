@@ -1,0 +1,47 @@
+.community_teaser {
+  background-color: #111;
+  padding: 20px;
+
+  $radius: 10px;
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+
+  h2 {
+    color: #FFFFFF;
+    margin-top: 0;
+    text-align: center;
+    margin-bottom: 1.5em;
+  }
+  
+  .parts {
+    .part {
+      color: #CCC;
+      display: inline-block;
+      width: 30%;
+      padding-right: 20px;
+      text-align: top;
+      height: 294px;
+      vertical-align: top;
+      
+      &:last-child {
+        padding-right: 0;
+      }
+      
+      p {
+        margin-top: 0;
+      }
+      
+      a {
+        color: white;
+        text-decoration: underline;
+      }
+      
+      h3 {
+        margin-top: 0;
+        color: white;
+        font-style: italic;
+      }
+    }
+  }
+}
