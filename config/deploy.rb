@@ -5,13 +5,13 @@ set :repository,  "https://github.com/craigambrose/atamai_development.git"
 
 set :scm, :git
 set :rails_env, "production"
-set :deploy_to, "/home/rails/#{application}/production"
-set :user, 'rails'
+set :user, 'atamai'
+set :deploy_to, "/home/#{user}/#{application}/production"
 set :use_sudo, false
 set :rake, 'bundle exec rake'
 set :deploy_via, :remote_cache
 
-set :domain, "atamai.org.nz"
+set :domain, "tt.craigambrose.com"
 role :web, domain                          # Your HTTP server, Apache/etc
 role :app, domain                          # This may be the same as your `Web` server
 role :db,  domain, :primary => true # This is where Rails migrations will run
