@@ -53,7 +53,7 @@ AtamaiDevelopment::Application.configure do
   ActionMailer::Base.delivery_method = :smtp
   ActionMailer::Base.smtp_settings = {  
     :address              => "localhost",  
-    :domain               => "atamai.org.nz",  
+    :domain               => "atamai.co.nz",  
     :authentication       => "plain",  
     :openssl_verify_mode  => 'none'
   }
