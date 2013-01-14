@@ -1,0 +1,20 @@
+- if page && !page.images.empty?
+  #page_images
+    %ul#gallery
+      - page.images.each do |image|
+        %li{display: image == page.images.first}
+          = image_tag(image.thumbnail("500x400#c").url)
+
+    = content_for :javascripts do
+      :javascript
+          $(document).ready(function(){
+            $('#gallery').galleryView({
+              panel_width: 500,
+              panel_height: 400,
+              frame_width: 0,
+              frame_height: 0,
+              theme_path: '/assets/gallery_view/themes/dark',
+              show_filmstrip: false,
+              show_filmstrip_nav: false
+            });
+          });    

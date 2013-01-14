@@ -1,14 +1,25 @@
 /* HOME PAGE HERO */
 
 #hero {
-  .vision {
-    text-align: center;
-    font-size: 140%;
+
+  height: 400px;
+  .vision { text-align: center; font-size: 140%; line-height: 140%; margin-top: 0.3em; }
+  .hero_main_text { 
+    text-align: justify; background: transparent url(/assets/oil_sunset.jpg) no-repeat 0px 0px; padding-left: 223px;
+    p {
+      font-size: 14pt; line-height: 140%;
+      a { white-space:nowrap; }
+    }
   }
-  .hero_main_text {
-    text-align: justify;
-    background: transparent url(/assets/oil_sunset.jpg) no-repeat 0px 0px;
-    padding-left: 223px;
+  #page_images { 
+    #gallery {
+      margin-top: 0px;
+      img {
+      }
+    }
+    width: 500px; height: 400px; float: left; margin: -20px 20px -20px -20px; padding: 0;
+    display: block;
+    .panel { margin: 0;}
   }
 }
 

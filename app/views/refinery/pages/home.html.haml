@@ -10,8 +10,9 @@
     }(document, 'script', 'facebook-jssdk'));
 
 - content_for :hero do
+  = render 'hero_gallery', page: @page
   %p.vision
-    Our Vision: "Living well, sustainably, together"
+    Living well, sustainably, together
   .hero_main_text
     %p.about_teaser      
       Atamai Village is designed to provide an enduring community for at least 200 people. Villagers
@@ -76,7 +77,7 @@
   .two_columns
     .column
       .teaser.movie_teaser
-        <iframe src="http://player.vimeo.com/video/40744512?title=0&amp;byline=0&amp;portrait=0" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+        / <iframe src="http://player.vimeo.com/video/40744512?title=0&amp;byline=0&amp;portrait=0" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
       
     .column
       .teaser.location_teaser
@@ -88,35 +89,35 @@
           Tasman Bay and is surrounded by two national parks.
           = link_to "More about Motueka", '/about/motueka-new-zealand', :class => "read_more"
 
-  .one_column
-    .community_teaser
-      %h2 Find out more about our community and vision
-      .parts
-        .part
-          %h3 More than just Infrastructure
+  / .one_column
+  /   .community_teaser
+  /     %h2 Find out more about our community and vision
+  /     .parts
+  /       .part
+  /         %h3 More than just Infrastructure
           
-          %p
-            We maintain a seperate community website operated by the villagers who live and work in Atamai Village.
-          %p
-            Visit the <a href="http://community.atamai.co.nz">Atamai Village Community Website</a> to find out
-            more about what we've been up to and what our vision is beyond the physical development
-            of the village.
+  /         %p
+  /           We maintain a seperate community website operated by the villagers who live and work in Atamai Village.
+  /         %p
+  /           Visit the <a href="http://community.atamai.co.nz">Atamai Village Community Website</a> to find out
+  /           more about what we've been up to and what our vision is beyond the physical development
+  /           of the village.
                       
-        .part
-          %h3 Help Atamai by clicking "like"
+  /       .part
+  /         %h3 Help Atamai by clicking "like"
           
-          %p
-            To stay up to date, follow us on twitter and facebook. We post regular updates of our successes and failures
-            in sustainable living.
+  /         %p
+  /           To stay up to date, follow us on twitter and facebook. We post regular updates of our successes and failures
+  /           in sustainable living.
           
-          %p
-            If you "like" or follow us on facebook or twitter, it also helps us promote the village to find others
-            who are a good fit for moving to Atamai.
+  /         %p
+  /           If you "like" or follow us on facebook or twitter, it also helps us promote the village to find others
+  /           who are a good fit for moving to Atamai.
         
-          %p
-            <a href="https://twitter.com/AtamaiVillage" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @AtamaiVillage</a>
-            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-        .part
-          <div class="fb-like-box" data-href="http://www.facebook.com/atamaivillage" data-width="292" data-colorscheme="dark" data-show-faces="true" data-border-color="#FFFFFF" data-stream="false" data-header="true"></div>
+  /         %p
+  /           <a href="https://twitter.com/AtamaiVillage" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @AtamaiVillage</a>
+  /           <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+  /       .part
+  /         <div class="fb-like-box" data-href="http://www.facebook.com/atamaivillage" data-width="292" data-colorscheme="dark" data-show-faces="true" data-border-color="#FFFFFF" data-stream="false" data-header="true"></div>
       
       
