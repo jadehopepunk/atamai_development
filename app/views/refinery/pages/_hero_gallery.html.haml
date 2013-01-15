@@ -2,7 +2,7 @@
   #page_images
     %ul#gallery
       - page.images.each do |image|
-        %li{display: image == page.images.first}
+        %li{display: image == page.images.first ? 'block' : 'none'}
           = image_tag(image.thumbnail("500x400#c").url)
 
     = content_for :javascripts do
