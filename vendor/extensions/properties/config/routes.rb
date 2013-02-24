@@ -1,9 +1,8 @@
 Refinery::Core::Engine.routes.append do
 
   # Frontend routes
-  namespace :properties do
-    resources :properties, :path => '', :only => [:index, :show]
-  end
+  match 'properties' => 'properties/properties#index', :as => :properties_properties
+  match 'properties/:id' => 'properties/properties#show', :constraints => { :id => /\d*/ }, :as => :properties_property
 
   # Admin routes
   namespace :properties, :path => '' do

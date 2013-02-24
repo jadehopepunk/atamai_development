@@ -6,7 +6,7 @@ namespace :sync do
 
   desc "Copy the production database into this local installation"
   task :production => [:environment] do
-    db_host = "atamai.co.nz"
+    db_host = "atamaivillage.com"
     username = "atamai"
     db_config = YAML.load_file('config/database.yml')[Rails.env]
     mysql_params = "-u #{db_config["username"]}"
