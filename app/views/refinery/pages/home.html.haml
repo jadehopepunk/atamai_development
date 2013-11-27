@@ -76,8 +76,10 @@
 
   .two_columns
     .column
-      .teaser.movie_teaser
-        <iframe src="http://player.vimeo.com/video/40744512?title=0&amp;byline=0&amp;portrait=0" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+      .teaser.image_teaser
+        = image_tag 'sign.jpg', class: 'illustration'
+        -#.movie_teaser
+        -#<iframe src="http://player.vimeo.com/video/40744512?title=0&amp;byline=0&amp;portrait=0" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
       
     .column
       .teaser.location_teaser
