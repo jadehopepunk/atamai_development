@@ -1,6 +1,6 @@
 <li class='clearfix record <%= cycle("on", "on-hover") %>' id="<%= dom_id(property) -%>">
   <span class='title'>
-    <%= [property.lot_name, property.headline].compact.join(': ') %>
+    <%= [property.lot_name, property.headline].reject(&:blank?).join(': ') %>
   </span>
   <span class='actions'>
 

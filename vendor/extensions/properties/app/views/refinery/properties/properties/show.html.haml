@@ -42,11 +42,10 @@
             - else
               To be determined
 
-    .commons_share
-      %h3 Atamai Commons Share
-      %p
-        Like all Atamai Properties, this comes with an
-        Atamai commons share included in the price.
+    - unless @property.note_title.blank?
+      .commons_share
+        %h3= @property.note_title
+        %p= @property.note_body
 
     .contact
       %p

@@ -7,11 +7,9 @@ module Refinery
 
       attr_accessible :lot_number, :headline, :description, :potential_uses,
         :position, :total_price, :availability_status, :land_area_sqm,
-        :street_address, :latitude, :longitude, :price_suffix
+        :street_address, :latitude, :longitude, :price_suffix, :note_title, :note_body
 
       acts_as_indexed :fields => [:lot_number, :headline, :description, :potential_uses]
-
-      validates :lot_number, :presence => true, :uniqueness => true
 
       has_many_page_images
       
@@ -25,7 +23,11 @@ module Refinery
       scope :saleable_order, order("availability_status, position").where("availability_status LIKE 'available%'")
 
       def lot_name
-        "Lot #{lot_number}"
+        if lot_number.blank?
+          street_address
+        else
+          "Lot #{lot_number}"
+        end
       end
 
       def latlng
