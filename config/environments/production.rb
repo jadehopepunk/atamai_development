@@ -51,12 +51,12 @@ AtamaiDevelopment::Application.configure do
   # Disable delivery errors, bad email addresses will be ignored
   # config.action_mailer.raise_delivery_errors = false
   ActionMailer::Base.delivery_method = :smtp
-  ActionMailer::Base.smtp_settings = {  
-    :address              => "localhost",  
-    :domain               => "atamai.co.nz",  
-    :authentication       => "plain",  
-    :openssl_verify_mode  => 'none'
-  }
+  # ActionMailer::Base.smtp_settings = {
+  #   :address              => "localhost",
+  #   :domain               => "atamaivillage.org",
+  #   :authentication       => "plain",
+  #   :openssl_verify_mode  => 'none'
+  # }
 
   # Enable threaded mode
   # config.threadsafe!
